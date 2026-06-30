@@ -1,0 +1,320 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "model",
+  "entities": [
+    {
+      "id": "model",
+      "label": "Mamba (SSM)",
+      "kind": "model",
+      "parent": null,
+      "placement": {
+        "pos": [
+          0.0,
+          1.7,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 2.4,
+          "height": 1.1
+        }
+      },
+      "content_tiers": {
+        "overview": "Sequence model with linear-time state-space scan (no attention)",
+        "detail": "selective SSM: input-dependent A,B,C",
+        "deep": "recurrence h = Ah + Bx, y = Ch"
+      }
+    },
+    {
+      "id": "emb",
+      "label": "Embeddings",
+      "kind": "input",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -3.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 50000,
+          "cols": 768,
+          "accent": [
+            0.5,
+            0.9,
+            0.7
+          ],
+          "eqn": "embed"
+        }
+      },
+      "content_tiers": {
+        "overview": "token to vector"
+      }
+    },
+    {
+      "id": "block",
+      "label": "Mamba Block",
+      "kind": "mechanism",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.97,
+          0.97,
+          0.97
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.55,
+            0.95,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 1.0,
+          "eqn": "mamba_gate"
+        }
+      },
+      "content_tiers": {
+        "overview": "linear -> conv1d -> SSM -> gate"
+      }
+    },
+    {
+      "id": "proj",
+      "label": "in-proj + conv",
+      "kind": "head",
+      "parent": "block",
+      "placement": {
+        "pos": [
+          -2.2,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.7,
+            0.9,
+            1.0
+          ],
+          "eqn": "fc"
+        }
+      },
+      "content_tiers": {
+        "overview": "expand + depthwise conv1d"
+      }
+    },
+    {
+      "id": "scan",
+      "label": "selective scan",
+      "kind": "head",
+      "parent": "block",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "conv",
+        "data": {
+          "in": 8,
+          "k": 1,
+          "stride": 1,
+          "pad": 0,
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ],
+          "eqn": "ssm"
+        }
+      },
+      "content_tiers": {
+        "overview": "state recurrence over time"
+      }
+    },
+    {
+      "id": "gate",
+      "label": "gate",
+      "kind": "head",
+      "parent": "block",
+      "placement": {
+        "pos": [
+          2.2,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.95,
+            0.85,
+            0.6
+          ],
+          "eqn": "mamba_gate"
+        }
+      },
+      "content_tiers": {
+        "overview": "SiLU gate, then project out"
+      }
+    },
+    {
+      "id": "out",
+      "label": "Output Head",
+      "kind": "output",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          3.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.94,
+          0.94,
+          0.94
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 768,
+          "cols": 50000,
+          "accent": [
+            0.95,
+            0.7,
+            0.4
+          ],
+          "eqn": "softmax"
+        }
+      },
+      "content_tiers": {
+        "overview": "hidden to vocab"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "emb",
+      "to": "block",
+      "kind": "flow"
+    },
+    {
+      "from": "proj",
+      "to": "scan",
+      "kind": "flow"
+    },
+    {
+      "from": "scan",
+      "to": "gate",
+      "kind": "flow"
+    },
+    {
+      "from": "block",
+      "to": "out",
+      "kind": "flow"
+    }
+  ],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      7.0,
+      3.6
+    ]
+  },
+  "provenance": {
+    "source": "modelarch:mamba",
+    "hash": "f12ace007f16b93d532c40b157059aacb3da4404dad28af50f05f991b2317b77",
+    "generated_at": "2026-06-29T14:05:36",
+    "generator": "model_architecture adapter"
+  }
+}

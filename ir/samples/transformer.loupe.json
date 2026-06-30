@@ -1,0 +1,1846 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "model",
+  "entities": [
+    {
+      "id": "model",
+      "label": "gpt2-demo",
+      "kind": "model",
+      "parent": null,
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 2.6,
+          "height": 1.4
+        }
+      },
+      "content_tiers": {
+        "overview": "gpt2-demo: 6L \u00b7 8H \u00b7 d=512",
+        "detail": "vocab=50,257 \u00b7 d_ff=2048 \u00b7 ctx=1024",
+        "deep": "Params \u2248 70,337,536 (rough)."
+      }
+    },
+    {
+      "id": "embeddings",
+      "label": "Token + Pos Embeddings",
+      "kind": "layer",
+      "parent": "model",
+      "lod_band": 0,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 50257,
+          "cols": 512,
+          "accent": [
+            0.5,
+            0.9,
+            0.7
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "Embedding matrix 50257\u00d7512"
+      }
+    },
+    {
+      "id": "block_0",
+      "label": "Decoder Block 0",
+      "kind": "block",
+      "parent": "model",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.4,
+            0.8,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.95
+        }
+      },
+      "content_tiers": {
+        "overview": "Block 0",
+        "detail": "8 heads \u00b7 MLP 512\u21922048\u2192512"
+      }
+    },
+    {
+      "id": "block_0_attn",
+      "label": "Multi-Head Attention",
+      "kind": "sublayer",
+      "parent": "block_0",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "8 heads",
+        "detail": "d_head=64"
+      }
+    },
+    {
+      "id": "block_0_mlp",
+      "label": "MLP",
+      "kind": "sublayer",
+      "parent": "block_0",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.95,
+            0.8
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "512\u21922048\u2192512",
+        "detail": "GELU feed-forward."
+      }
+    },
+    {
+      "id": "block_0_ln1",
+      "label": "LayerNorm 1",
+      "kind": "norm",
+      "parent": "block_0",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-attention norm."
+      }
+    },
+    {
+      "id": "block_0_ln2",
+      "label": "LayerNorm 2",
+      "kind": "norm",
+      "parent": "block_0",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-MLP norm."
+      }
+    },
+    {
+      "id": "block_0_attn_h0",
+      "label": "Head 0",
+      "kind": "head",
+      "parent": "block_0_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 0",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_0_attn_h1",
+      "label": "Head 1",
+      "kind": "head",
+      "parent": "block_0_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 1",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_0_attn_h2",
+      "label": "Head 2",
+      "kind": "head",
+      "parent": "block_0_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 2",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_0_attn_h3",
+      "label": "Head 3",
+      "kind": "head",
+      "parent": "block_0_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 3",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_0_attn_h4",
+      "label": "Head 4",
+      "kind": "head",
+      "parent": "block_0_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 4",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_0_attn_h5",
+      "label": "Head 5",
+      "kind": "head",
+      "parent": "block_0_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 5",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_0_attn_h6",
+      "label": "Head 6",
+      "kind": "head",
+      "parent": "block_0_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 6",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_0_attn_h7",
+      "label": "Head 7",
+      "kind": "head",
+      "parent": "block_0_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 7",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_1",
+      "label": "Decoder Block 1",
+      "kind": "block",
+      "parent": "model",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.4,
+            0.8,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.95
+        }
+      },
+      "content_tiers": {
+        "overview": "Block 1",
+        "detail": "8 heads \u00b7 MLP 512\u21922048\u2192512"
+      }
+    },
+    {
+      "id": "block_1_attn",
+      "label": "Multi-Head Attention",
+      "kind": "sublayer",
+      "parent": "block_1",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "8 heads",
+        "detail": "d_head=64"
+      }
+    },
+    {
+      "id": "block_1_mlp",
+      "label": "MLP",
+      "kind": "sublayer",
+      "parent": "block_1",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.95,
+            0.8
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "512\u21922048\u2192512",
+        "detail": "GELU feed-forward."
+      }
+    },
+    {
+      "id": "block_1_ln1",
+      "label": "LayerNorm 1",
+      "kind": "norm",
+      "parent": "block_1",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-attention norm."
+      }
+    },
+    {
+      "id": "block_1_ln2",
+      "label": "LayerNorm 2",
+      "kind": "norm",
+      "parent": "block_1",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-MLP norm."
+      }
+    },
+    {
+      "id": "block_1_attn_h0",
+      "label": "Head 0",
+      "kind": "head",
+      "parent": "block_1_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 0",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_1_attn_h1",
+      "label": "Head 1",
+      "kind": "head",
+      "parent": "block_1_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 1",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_1_attn_h2",
+      "label": "Head 2",
+      "kind": "head",
+      "parent": "block_1_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 2",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_1_attn_h3",
+      "label": "Head 3",
+      "kind": "head",
+      "parent": "block_1_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 3",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_1_attn_h4",
+      "label": "Head 4",
+      "kind": "head",
+      "parent": "block_1_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 4",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_1_attn_h5",
+      "label": "Head 5",
+      "kind": "head",
+      "parent": "block_1_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 5",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_1_attn_h6",
+      "label": "Head 6",
+      "kind": "head",
+      "parent": "block_1_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 6",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_1_attn_h7",
+      "label": "Head 7",
+      "kind": "head",
+      "parent": "block_1_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 7",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_2",
+      "label": "Decoder Block 2",
+      "kind": "block",
+      "parent": "model",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.4,
+            0.8,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.95
+        }
+      },
+      "content_tiers": {
+        "overview": "Block 2",
+        "detail": "8 heads \u00b7 MLP 512\u21922048\u2192512"
+      }
+    },
+    {
+      "id": "block_2_attn",
+      "label": "Multi-Head Attention",
+      "kind": "sublayer",
+      "parent": "block_2",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "8 heads",
+        "detail": "d_head=64"
+      }
+    },
+    {
+      "id": "block_2_mlp",
+      "label": "MLP",
+      "kind": "sublayer",
+      "parent": "block_2",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.95,
+            0.8
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "512\u21922048\u2192512",
+        "detail": "GELU feed-forward."
+      }
+    },
+    {
+      "id": "block_2_ln1",
+      "label": "LayerNorm 1",
+      "kind": "norm",
+      "parent": "block_2",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-attention norm."
+      }
+    },
+    {
+      "id": "block_2_ln2",
+      "label": "LayerNorm 2",
+      "kind": "norm",
+      "parent": "block_2",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-MLP norm."
+      }
+    },
+    {
+      "id": "block_2_attn_h0",
+      "label": "Head 0",
+      "kind": "head",
+      "parent": "block_2_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 0",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_2_attn_h1",
+      "label": "Head 1",
+      "kind": "head",
+      "parent": "block_2_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 1",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_2_attn_h2",
+      "label": "Head 2",
+      "kind": "head",
+      "parent": "block_2_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 2",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_2_attn_h3",
+      "label": "Head 3",
+      "kind": "head",
+      "parent": "block_2_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 3",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_2_attn_h4",
+      "label": "Head 4",
+      "kind": "head",
+      "parent": "block_2_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 4",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_2_attn_h5",
+      "label": "Head 5",
+      "kind": "head",
+      "parent": "block_2_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 5",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_2_attn_h6",
+      "label": "Head 6",
+      "kind": "head",
+      "parent": "block_2_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 6",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_2_attn_h7",
+      "label": "Head 7",
+      "kind": "head",
+      "parent": "block_2_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 7",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_3",
+      "label": "Decoder Block 3",
+      "kind": "block",
+      "parent": "model",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.4,
+            0.8,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.95
+        }
+      },
+      "content_tiers": {
+        "overview": "Block 3",
+        "detail": "8 heads \u00b7 MLP 512\u21922048\u2192512"
+      }
+    },
+    {
+      "id": "block_3_attn",
+      "label": "Multi-Head Attention",
+      "kind": "sublayer",
+      "parent": "block_3",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "8 heads",
+        "detail": "d_head=64"
+      }
+    },
+    {
+      "id": "block_3_mlp",
+      "label": "MLP",
+      "kind": "sublayer",
+      "parent": "block_3",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.95,
+            0.8
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "512\u21922048\u2192512",
+        "detail": "GELU feed-forward."
+      }
+    },
+    {
+      "id": "block_3_ln1",
+      "label": "LayerNorm 1",
+      "kind": "norm",
+      "parent": "block_3",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-attention norm."
+      }
+    },
+    {
+      "id": "block_3_ln2",
+      "label": "LayerNorm 2",
+      "kind": "norm",
+      "parent": "block_3",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-MLP norm."
+      }
+    },
+    {
+      "id": "block_3_attn_h0",
+      "label": "Head 0",
+      "kind": "head",
+      "parent": "block_3_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 0",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_3_attn_h1",
+      "label": "Head 1",
+      "kind": "head",
+      "parent": "block_3_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 1",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_3_attn_h2",
+      "label": "Head 2",
+      "kind": "head",
+      "parent": "block_3_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 2",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_3_attn_h3",
+      "label": "Head 3",
+      "kind": "head",
+      "parent": "block_3_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 3",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_3_attn_h4",
+      "label": "Head 4",
+      "kind": "head",
+      "parent": "block_3_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 4",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_3_attn_h5",
+      "label": "Head 5",
+      "kind": "head",
+      "parent": "block_3_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 5",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_3_attn_h6",
+      "label": "Head 6",
+      "kind": "head",
+      "parent": "block_3_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 6",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_3_attn_h7",
+      "label": "Head 7",
+      "kind": "head",
+      "parent": "block_3_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 7",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_4",
+      "label": "Decoder Block 4",
+      "kind": "block",
+      "parent": "model",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.4,
+            0.8,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.95
+        }
+      },
+      "content_tiers": {
+        "overview": "Block 4",
+        "detail": "8 heads \u00b7 MLP 512\u21922048\u2192512"
+      }
+    },
+    {
+      "id": "block_4_attn",
+      "label": "Multi-Head Attention",
+      "kind": "sublayer",
+      "parent": "block_4",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "8 heads",
+        "detail": "d_head=64"
+      }
+    },
+    {
+      "id": "block_4_mlp",
+      "label": "MLP",
+      "kind": "sublayer",
+      "parent": "block_4",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.95,
+            0.8
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "512\u21922048\u2192512",
+        "detail": "GELU feed-forward."
+      }
+    },
+    {
+      "id": "block_4_ln1",
+      "label": "LayerNorm 1",
+      "kind": "norm",
+      "parent": "block_4",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-attention norm."
+      }
+    },
+    {
+      "id": "block_4_ln2",
+      "label": "LayerNorm 2",
+      "kind": "norm",
+      "parent": "block_4",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-MLP norm."
+      }
+    },
+    {
+      "id": "block_4_attn_h0",
+      "label": "Head 0",
+      "kind": "head",
+      "parent": "block_4_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 0",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_4_attn_h1",
+      "label": "Head 1",
+      "kind": "head",
+      "parent": "block_4_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 1",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_4_attn_h2",
+      "label": "Head 2",
+      "kind": "head",
+      "parent": "block_4_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 2",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_4_attn_h3",
+      "label": "Head 3",
+      "kind": "head",
+      "parent": "block_4_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 3",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_4_attn_h4",
+      "label": "Head 4",
+      "kind": "head",
+      "parent": "block_4_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 4",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_4_attn_h5",
+      "label": "Head 5",
+      "kind": "head",
+      "parent": "block_4_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 5",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_4_attn_h6",
+      "label": "Head 6",
+      "kind": "head",
+      "parent": "block_4_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 6",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_4_attn_h7",
+      "label": "Head 7",
+      "kind": "head",
+      "parent": "block_4_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 7",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_5",
+      "label": "Decoder Block 5",
+      "kind": "block",
+      "parent": "model",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.4,
+            0.8,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.95
+        }
+      },
+      "content_tiers": {
+        "overview": "Block 5",
+        "detail": "8 heads \u00b7 MLP 512\u21922048\u2192512"
+      }
+    },
+    {
+      "id": "block_5_attn",
+      "label": "Multi-Head Attention",
+      "kind": "sublayer",
+      "parent": "block_5",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "8 heads",
+        "detail": "d_head=64"
+      }
+    },
+    {
+      "id": "block_5_mlp",
+      "label": "MLP",
+      "kind": "sublayer",
+      "parent": "block_5",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.95,
+            0.8
+          ],
+          "width": 1.2,
+          "height": 0.8
+        }
+      },
+      "content_tiers": {
+        "overview": "512\u21922048\u2192512",
+        "detail": "GELU feed-forward."
+      }
+    },
+    {
+      "id": "block_5_ln1",
+      "label": "LayerNorm 1",
+      "kind": "norm",
+      "parent": "block_5",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-attention norm."
+      }
+    },
+    {
+      "id": "block_5_ln2",
+      "label": "LayerNorm 2",
+      "kind": "norm",
+      "parent": "block_5",
+      "lod_band": 2,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Pre-MLP norm."
+      }
+    },
+    {
+      "id": "block_5_attn_h0",
+      "label": "Head 0",
+      "kind": "head",
+      "parent": "block_5_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 0",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_5_attn_h1",
+      "label": "Head 1",
+      "kind": "head",
+      "parent": "block_5_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 1",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_5_attn_h2",
+      "label": "Head 2",
+      "kind": "head",
+      "parent": "block_5_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 2",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_5_attn_h3",
+      "label": "Head 3",
+      "kind": "head",
+      "parent": "block_5_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 3",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_5_attn_h4",
+      "label": "Head 4",
+      "kind": "head",
+      "parent": "block_5_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 4",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_5_attn_h5",
+      "label": "Head 5",
+      "kind": "head",
+      "parent": "block_5_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 5",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_5_attn_h6",
+      "label": "Head 6",
+      "kind": "head",
+      "parent": "block_5_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 6",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "block_5_attn_h7",
+      "label": "Head 7",
+      "kind": "head",
+      "parent": "block_5_attn",
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "note": "attention pattern"
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention head 7",
+        "detail": "Q,K,V projections \u2192 d_head=64"
+      }
+    },
+    {
+      "id": "final_norm",
+      "label": "Final LayerNorm",
+      "kind": "layer",
+      "parent": "model",
+      "lod_band": 1,
+      "payload": {
+        "type": "none"
+      },
+      "content_tiers": {
+        "overview": "Final normalization."
+      }
+    },
+    {
+      "id": "lm_head",
+      "label": "LM Head",
+      "kind": "layer",
+      "parent": "model",
+      "lod_band": 0,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 512,
+          "cols": 50257,
+          "accent": [
+            0.95,
+            0.7,
+            0.4
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "Output projection 512\u00d750257"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "embeddings",
+      "to": "block_0",
+      "kind": "residual"
+    },
+    {
+      "from": "block_0_attn",
+      "to": "block_0_mlp",
+      "kind": "flow"
+    },
+    {
+      "from": "block_0",
+      "to": "block_1",
+      "kind": "residual"
+    },
+    {
+      "from": "block_1_attn",
+      "to": "block_1_mlp",
+      "kind": "flow"
+    },
+    {
+      "from": "block_1",
+      "to": "block_2",
+      "kind": "residual"
+    },
+    {
+      "from": "block_2_attn",
+      "to": "block_2_mlp",
+      "kind": "flow"
+    },
+    {
+      "from": "block_2",
+      "to": "block_3",
+      "kind": "residual"
+    },
+    {
+      "from": "block_3_attn",
+      "to": "block_3_mlp",
+      "kind": "flow"
+    },
+    {
+      "from": "block_3",
+      "to": "block_4",
+      "kind": "residual"
+    },
+    {
+      "from": "block_4_attn",
+      "to": "block_4_mlp",
+      "kind": "flow"
+    },
+    {
+      "from": "block_4",
+      "to": "block_5",
+      "kind": "residual"
+    },
+    {
+      "from": "block_5_attn",
+      "to": "block_5_mlp",
+      "kind": "flow"
+    },
+    {
+      "from": "block_5",
+      "to": "final_norm",
+      "kind": "residual"
+    },
+    {
+      "from": "final_norm",
+      "to": "lm_head",
+      "kind": "flow"
+    }
+  ],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      6.0,
+      3.2
+    ]
+  },
+  "provenance": {
+    "source": "examples\\gpt2_config.json",
+    "hash": "7ce44977f13898314f919c0dc4df55d8e2c806ce7d62e2e99886055c97a88985",
+    "generated_at": "2026-06-23T12:23:39",
+    "generator": "loupe-ingest/transformer"
+  }
+}

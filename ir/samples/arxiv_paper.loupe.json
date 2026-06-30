@@ -1,0 +1,326 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "paper",
+  "entities": [
+    {
+      "id": "paper",
+      "label": "Attention Is All You Need",
+      "kind": "paper",
+      "parent": null,
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.95,
+            0.8
+          ],
+          "width": 2.8,
+          "height": 1.5
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention Is All You Need",
+        "detail": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit et al.",
+        "deep": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the W"
+      }
+    },
+    {
+      "id": "abstract",
+      "label": "Abstract",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.9,
+            0.85
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. W",
+        "detail": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a ne"
+      }
+    },
+    {
+      "id": "authors",
+      "label": "Authors",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.85,
+            1.0
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin"
+      }
+    },
+    {
+      "id": "categories",
+      "label": "Categories",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.8,
+            1.0
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "cs.CL, cs.LG"
+      }
+    },
+    {
+      "id": "sec_0",
+      "label": "1 Introduction",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.9
+        }
+      },
+      "content_tiers": {
+        "overview": "1 Introduction"
+      }
+    },
+    {
+      "id": "sec_1",
+      "label": "2 Background",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.9
+        }
+      },
+      "content_tiers": {
+        "overview": "2 Background"
+      }
+    },
+    {
+      "id": "sec_2",
+      "label": "3 Model Architecture",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.9
+        }
+      },
+      "content_tiers": {
+        "overview": "3 Model Architecture"
+      }
+    },
+    {
+      "id": "sec_3",
+      "label": "4 Why Self-Attention",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.9
+        }
+      },
+      "content_tiers": {
+        "overview": "4 Why Self-Attention"
+      }
+    },
+    {
+      "id": "sec_4",
+      "label": "5 Training",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.9
+        }
+      },
+      "content_tiers": {
+        "overview": "5 Training"
+      }
+    },
+    {
+      "id": "sec_5",
+      "label": "6 Results",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.9
+        }
+      },
+      "content_tiers": {
+        "overview": "6 Results"
+      }
+    },
+    {
+      "id": "sec_6",
+      "label": "7 Conclusion",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.9
+        }
+      },
+      "content_tiers": {
+        "overview": "7 Conclusion"
+      }
+    },
+    {
+      "id": "sec_7",
+      "label": "Attention Visualizations",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 1.5,
+          "height": 0.9
+        }
+      },
+      "content_tiers": {
+        "overview": "Attention Visualizations"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "abstract",
+      "to": "authors",
+      "kind": "relates_to"
+    },
+    {
+      "from": "abstract",
+      "to": "sec_0",
+      "kind": "flow"
+    },
+    {
+      "from": "sec_0",
+      "to": "sec_1",
+      "kind": "flow"
+    },
+    {
+      "from": "sec_1",
+      "to": "sec_2",
+      "kind": "flow"
+    },
+    {
+      "from": "sec_2",
+      "to": "sec_3",
+      "kind": "flow"
+    },
+    {
+      "from": "sec_3",
+      "to": "sec_4",
+      "kind": "flow"
+    },
+    {
+      "from": "sec_4",
+      "to": "sec_5",
+      "kind": "flow"
+    },
+    {
+      "from": "sec_5",
+      "to": "sec_6",
+      "kind": "flow"
+    },
+    {
+      "from": "sec_6",
+      "to": "sec_7",
+      "kind": "flow"
+    }
+  ],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      5.5,
+      3.0
+    ]
+  },
+  "provenance": {
+    "hash": "72ad169d92bdda387d507158bd80c32f4d2a846bc9def83d2ea26e1a3b4202e4",
+    "generated_at": "2026-06-23T14:04:34",
+    "generator": "loupe-ingest/arxiv"
+  }
+}

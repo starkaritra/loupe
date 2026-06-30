@@ -1,0 +1,360 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "model",
+  "entities": [
+    {
+      "id": "model",
+      "label": "Encoder-Decoder Transformer",
+      "kind": "model",
+      "parent": null,
+      "placement": {
+        "pos": [
+          0.0,
+          1.7,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 2.4,
+          "height": 1.1
+        }
+      },
+      "content_tiers": {
+        "overview": "Seq2seq (translation): encoder reads, decoder writes",
+        "detail": "encoder self-attn + decoder self-attn + cross-attn",
+        "deep": "decoder attends to encoder outputs via cross-attention"
+      }
+    },
+    {
+      "id": "enc",
+      "label": "Encoder",
+      "kind": "input",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -4.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.9,
+            1.0
+          ],
+          "width": 1.4,
+          "height": 0.9,
+          "eqn": "attention"
+        }
+      },
+      "content_tiers": {
+        "overview": "bidirectional self-attention over source"
+      }
+    },
+    {
+      "id": "enc_mech",
+      "label": "Encoder",
+      "kind": "mechanism",
+      "parent": "enc",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.85,
+          0.85,
+          0.85
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "attention",
+        "data": {
+          "seq": 8,
+          "d_model": 768,
+          "n_heads": 12,
+          "accent": [
+            0.5,
+            0.9,
+            1.0
+          ],
+          "eqn": "attention"
+        }
+      },
+      "content_tiers": {
+        "overview": "bidirectional self-attention over source"
+      }
+    },
+    {
+      "id": "cross",
+      "label": "Cross-Attention",
+      "kind": "mechanism",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -1.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.97,
+          0.97,
+          0.97
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "width": 1.4,
+          "height": 0.9,
+          "eqn": "cross_attn"
+        }
+      },
+      "content_tiers": {
+        "overview": "target queries attend to source"
+      }
+    },
+    {
+      "id": "cross_mech",
+      "label": "Cross-Attention",
+      "kind": "mechanism",
+      "parent": "cross",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.85,
+          0.85,
+          0.85
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "attention",
+        "data": {
+          "seq": 8,
+          "d_model": 768,
+          "n_heads": 12,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "eqn": "cross_attn"
+        }
+      },
+      "content_tiers": {
+        "overview": "target queries attend to source"
+      }
+    },
+    {
+      "id": "dec",
+      "label": "Decoder",
+      "kind": "block",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          1.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.94,
+          0.94,
+          0.94
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.55,
+            0.95,
+            1.0
+          ],
+          "width": 1.4,
+          "height": 0.9,
+          "eqn": "attention"
+        }
+      },
+      "content_tiers": {
+        "overview": "causal self-attention over target"
+      }
+    },
+    {
+      "id": "dec_mech",
+      "label": "Decoder",
+      "kind": "mechanism",
+      "parent": "dec",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.85,
+          0.85,
+          0.85
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "attention",
+        "data": {
+          "seq": 8,
+          "d_model": 768,
+          "n_heads": 12,
+          "accent": [
+            0.55,
+            0.95,
+            1.0
+          ],
+          "eqn": "attention"
+        }
+      },
+      "content_tiers": {
+        "overview": "causal self-attention over target"
+      }
+    },
+    {
+      "id": "head",
+      "label": "Output Head",
+      "kind": "output",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          4.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.91,
+          0.91,
+          0.91
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 768,
+          "cols": 50257,
+          "accent": [
+            0.95,
+            0.7,
+            0.4
+          ],
+          "eqn": "softmax"
+        }
+      },
+      "content_tiers": {
+        "overview": "next-token over target vocab"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "enc",
+      "to": "cross",
+      "kind": "flow"
+    },
+    {
+      "from": "cross",
+      "to": "dec",
+      "kind": "flow"
+    },
+    {
+      "from": "dec",
+      "to": "head",
+      "kind": "flow"
+    }
+  ],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      7.0,
+      3.6
+    ]
+  },
+  "provenance": {
+    "source": "modelarch:seq2seq",
+    "hash": "b99a1ae43bd51825173960db5168c7c484d49c6ac48564def49de347dcf0336c",
+    "generated_at": "2026-06-29T14:05:36",
+    "generator": "model_architecture adapter"
+  }
+}

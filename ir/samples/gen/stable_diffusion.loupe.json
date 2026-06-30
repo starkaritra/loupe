@@ -1,0 +1,323 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "model",
+  "entities": [
+    {
+      "id": "model",
+      "label": "Stable Diffusion",
+      "kind": "model",
+      "parent": null,
+      "placement": {
+        "pos": [
+          0.0,
+          1.7,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 2.4,
+          "height": 1.1
+        }
+      },
+      "content_tiers": {
+        "overview": "Text-to-image: denoise latent noise into a picture",
+        "detail": "CLIP text + U-Net denoiser + VAE decoder",
+        "deep": "iteratively predict and subtract noise"
+      }
+    },
+    {
+      "id": "clip",
+      "label": "CLIP Text Encoder",
+      "kind": "input",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -3.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 77,
+          "cols": 768,
+          "accent": [
+            0.5,
+            0.9,
+            0.7
+          ],
+          "eqn": "clip"
+        }
+      },
+      "content_tiers": {
+        "overview": "prompt to conditioning vectors"
+      }
+    },
+    {
+      "id": "unet",
+      "label": "U-Net Denoiser",
+      "kind": "mechanism",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.97,
+          0.97,
+          0.97
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.55,
+            0.95,
+            1.0
+          ],
+          "width": 1.6,
+          "height": 1.0,
+          "eqn": "unet"
+        }
+      },
+      "content_tiers": {
+        "overview": "predicts the noise, x50 steps"
+      }
+    },
+    {
+      "id": "down",
+      "label": "down blocks",
+      "kind": "head",
+      "parent": "unet",
+      "placement": {
+        "pos": [
+          -2.2,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "glow": 0.5,
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ],
+          "note": "encode"
+        }
+      },
+      "content_tiers": {
+        "overview": "downsample + self-attn"
+      }
+    },
+    {
+      "id": "xattn",
+      "label": "cross-attn",
+      "kind": "head",
+      "parent": "unet",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "attention",
+        "data": {
+          "seq": 8,
+          "d_model": 768,
+          "n_heads": 8,
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "eqn": "diffuse"
+        }
+      },
+      "content_tiers": {
+        "overview": "pixels attend to the prompt"
+      }
+    },
+    {
+      "id": "up",
+      "label": "up blocks",
+      "kind": "head",
+      "parent": "unet",
+      "placement": {
+        "pos": [
+          2.2,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "glow": 0.5,
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ],
+          "note": "decode"
+        }
+      },
+      "content_tiers": {
+        "overview": "upsample back, skip links"
+      }
+    },
+    {
+      "id": "vae",
+      "label": "VAE Decoder",
+      "kind": "output",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          3.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.94,
+          0.94,
+          0.94
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.95,
+            0.7,
+            0.4
+          ],
+          "note": "latent->image",
+          "eqn": "vae"
+        }
+      },
+      "content_tiers": {
+        "overview": "latent to 512x512 image"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "clip",
+      "to": "unet",
+      "kind": "flow"
+    },
+    {
+      "from": "down",
+      "to": "xattn",
+      "kind": "flow"
+    },
+    {
+      "from": "xattn",
+      "to": "up",
+      "kind": "flow"
+    },
+    {
+      "from": "unet",
+      "to": "vae",
+      "kind": "flow"
+    }
+  ],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      7.0,
+      3.6
+    ]
+  },
+  "provenance": {
+    "source": "modelarch:stable_diffusion",
+    "hash": "22c31ea9bcff5ecb070d3c0dfc1bb3171a76a8abbd0f2870779b308b05c5e9d8",
+    "generated_at": "2026-06-29T14:05:36",
+    "generator": "model_architecture adapter"
+  }
+}

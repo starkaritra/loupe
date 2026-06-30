@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "loupe-ir/v1",
+  "title": "Loupe IR",
+  "description": "Universal structure schema. The one neutral thing every domain compiles to.",
+  "type": "object",
+  "required": ["version", "root", "entities"],
+  "properties": {
+    "version": { "const": "loupe-ir/v1" },
+    "root": { "type": "string", "description": "id of the root entity" },
+    "entities": { "type": "array", "items": { "$ref": "#/definitions/entity" }, "minItems": 1 },
+    "relations": { "type": "array", "items": { "$ref": "#/definitions/relation" } },
+    "lod_policy": { "$ref": "#/definitions/lod_policy" },
+    "provenance": { "$ref": "#/definitions/provenance" }
+  },
+  "definitions": {
+    "vec3": { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+    "entity": {
+      "type": "object",
+      "required": ["id", "label"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "kind": { "type": "string", "description": "domain tag, e.g. part|section|region|module" },
+        "parent": { "type": ["string", "null"] },
+        "placement": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "properties": {
+                "pos": { "$ref": "#/definitions/vec3" },
+                "rot": { "$ref": "#/definitions/vec3" },
+                "scale": { "$ref": "#/definitions/vec3" }
+              },
+              "additionalProperties": false
+            }
+          ]
+        },
+        "lod_band": { "type": "integer", "minimum": 0, "default": 0 },
+        "payload": { "$ref": "#/definitions/payload" },
+        "content_tiers": {
+          "type": "object",
+          "properties": {
+            "overview": { "type": "string" },
+            "detail": { "type": "string" },
+            "deep": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "provenance": { "oneOf": [ { "type": "null" }, { "$ref": "#/definitions/provenance" } ] }
+      },
+      "additionalProperties": false
+    },
+    "payload": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["none", "mesh", "text", "signal", "image", "equation", "table", "point_cloud", "graph", "matrix", "volume", "attention", "conv"]
+        },
+        "data": { "description": "inline payload data (small payloads only)" },
+        "ref": { "type": "string", "description": "path/stream reference for large payloads" }
+      },
+      "additionalProperties": false
+    },
+    "relation": {
+      "type": "object",
+      "required": ["from", "to", "kind"],
+      "properties": {
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "kind": { "type": "string", "description": "flow|depends_on|connects|cites|feeds|..." }
+      },
+      "additionalProperties": false
+    },
+    "lod_policy": {
+      "type": "object",
+      "properties": {
+        "bands": { "type": "integer", "minimum": 1, "default": 3 },
+        "distance_thresholds": { "type": "array", "items": { "type": "number" } }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "source": { "type": "string" },
+        "hash": { "type": "string" },
+        "generated_at": { "type": "string" },
+        "generator": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

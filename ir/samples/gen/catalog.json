@@ -1,0 +1,72 @@
+[
+  {
+    "name": "gpt2",
+    "label": "Transformer (GPT-2)",
+    "path": "res://ir/samples/gen/gpt2.loupe.json"
+  },
+  {
+    "name": "bert",
+    "label": "BERT (encoder)",
+    "path": "res://ir/samples/gen/bert.loupe.json"
+  },
+  {
+    "name": "seq2seq",
+    "label": "Encoder-Decoder Transformer",
+    "path": "res://ir/samples/gen/seq2seq.loupe.json"
+  },
+  {
+    "name": "vit",
+    "label": "Vision Transformer (ViT)",
+    "path": "res://ir/samples/gen/vit.loupe.json"
+  },
+  {
+    "name": "alexnet",
+    "label": "AlexNet (CNN)",
+    "path": "res://ir/samples/gen/alexnet.loupe.json"
+  },
+  {
+    "name": "resnet",
+    "label": "ResNet",
+    "path": "res://ir/samples/gen/resnet.loupe.json"
+  },
+  {
+    "name": "unet",
+    "label": "U-Net",
+    "path": "res://ir/samples/gen/unet.loupe.json"
+  },
+  {
+    "name": "lstm",
+    "label": "LSTM",
+    "path": "res://ir/samples/gen/lstm.loupe.json"
+  },
+  {
+    "name": "gru",
+    "label": "GRU",
+    "path": "res://ir/samples/gen/gru.loupe.json"
+  },
+  {
+    "name": "mamba",
+    "label": "Mamba (SSM)",
+    "path": "res://ir/samples/gen/mamba.loupe.json"
+  },
+  {
+    "name": "stable_diffusion",
+    "label": "Stable Diffusion",
+    "path": "res://ir/samples/gen/stable_diffusion.loupe.json"
+  },
+  {
+    "name": "vae",
+    "label": "Variational Autoencoder",
+    "path": "res://ir/samples/gen/vae.loupe.json"
+  },
+  {
+    "name": "gan",
+    "label": "GAN",
+    "path": "res://ir/samples/gen/gan.loupe.json"
+  },
+  {
+    "name": "moe",
+    "label": "Mixture-of-Experts Transformer",
+    "path": "res://ir/samples/gen/moe.loupe.json"
+  }
+]

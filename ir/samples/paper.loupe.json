@@ -1,0 +1,86 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "paper",
+  "provenance": {
+    "source": "hand-authored",
+    "generated_at": "2026-06-23",
+    "generator": "loupe scaffold v0"
+  },
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [5.5, 3.0]
+  },
+  "entities": [
+    {
+      "id": "paper",
+      "label": "Loupe: A Domain-Agnostic\nExploded-View Explorer",
+      "kind": "document",
+      "parent": null,
+      "lod_band": 0,
+      "payload": { "type": "text", "data": { "accent": [0.45, 0.95, 0.8], "width": 2.4, "height": 1.3 } },
+      "content_tiers": {
+        "overview": "A native tool to hold, explode, and zoom any nested system.",
+        "detail": "Universal shell × specialized lenses; IR-driven."
+      }
+    },
+    {
+      "id": "abstract",
+      "label": "Abstract",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": { "type": "text", "data": { "accent": [0.5, 0.9, 0.85] } },
+      "content_tiers": { "overview": "We separate universal structure from specialized rendering." }
+    },
+    {
+      "id": "method",
+      "label": "Method",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": { "type": "text", "data": { "accent": [0.45, 0.85, 1.0] } },
+      "content_tiers": { "overview": "Shell handles hierarchy, explode, semantic zoom." }
+    },
+    {
+      "id": "shell_lens",
+      "label": "Shell / Lens Split",
+      "kind": "subsection",
+      "parent": "method",
+      "lod_band": 1,
+      "payload": { "type": "text", "data": { "accent": [0.6, 0.9, 1.0], "width": 1.4, "height": 0.9 } },
+      "content_tiers": { "overview": "Universality at structure; quality at payload." }
+    },
+    {
+      "id": "ir_schema",
+      "label": "IR Schema",
+      "kind": "subsection",
+      "parent": "method",
+      "lod_band": 1,
+      "payload": { "type": "text", "data": { "accent": [0.6, 0.9, 1.0], "width": 1.4, "height": 0.9 } },
+      "content_tiers": { "overview": "Versioned loupe-ir/v1 with provenance on every entity." }
+    },
+    {
+      "id": "ir_detail",
+      "label": "Entity Fields",
+      "kind": "point",
+      "parent": "ir_schema",
+      "lod_band": 2,
+      "payload": { "type": "text", "data": { "accent": [0.7, 0.95, 1.0], "width": 1.2, "height": 0.7 } },
+      "content_tiers": { "overview": "id · parent · placement · lod_band · payload · tiers." }
+    },
+    {
+      "id": "results",
+      "label": "Results",
+      "kind": "section",
+      "parent": "paper",
+      "lod_band": 0,
+      "payload": { "type": "text", "data": { "accent": [0.5, 0.95, 0.7] } },
+      "content_tiers": { "overview": "One shell explores a rocket engine AND this paper." }
+    }
+  ],
+  "relations": [
+    { "from": "abstract", "to": "method", "kind": "flow" },
+    { "from": "method", "to": "results", "kind": "flow" },
+    { "from": "shell_lens", "to": "ir_schema", "kind": "depends_on" }
+  ]
+}

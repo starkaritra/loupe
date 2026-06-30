@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loupe-ingest"
+version = "0.1.0"
+description = "Universal function: compile anything into loupe-ir/v1 for the Loupe exploded-view explorer."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Aritra Das" }]
+# Core has ZERO runtime dependencies — deterministic-first, stdlib only. LLM providers are optional.
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai>=1.0"]
+anthropic = ["anthropic>=0.30"]
+gemini = ["google-generativeai>=0.7"]
+# ollama needs no SDK (stdlib HTTP). 'all' installs the API-based providers.
+all = ["openai>=1.0", "anthropic>=0.30", "google-generativeai>=0.7"]
+test = ["pytest>=7"]
+
+[project.scripts]
+loupe-ingest = "loupe_ingest.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["loupe_ingest*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

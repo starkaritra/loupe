@@ -1,0 +1,355 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "model",
+  "entities": [
+    {
+      "id": "model",
+      "label": "Variational Autoencoder",
+      "kind": "model",
+      "parent": null,
+      "placement": {
+        "pos": [
+          0.0,
+          1.7,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 2.4,
+          "height": 1.1
+        }
+      },
+      "content_tiers": {
+        "overview": "Compress to a probabilistic latent, then reconstruct",
+        "detail": "encoder -> (mu, sigma) -> sample z -> decoder",
+        "deep": "reparameterization makes sampling differentiable"
+      }
+    },
+    {
+      "id": "x",
+      "label": "Input",
+      "kind": "input",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -4.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.6,
+            0.95,
+            0.7
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "image / data point"
+      }
+    },
+    {
+      "id": "enc",
+      "label": "Encoder",
+      "kind": "block",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -1.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.97,
+          0.97,
+          0.97
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.5,
+            0.85,
+            1.0
+          ],
+          "eqn": "vae_enc"
+        }
+      },
+      "content_tiers": {
+        "overview": "to mean and variance"
+      }
+    },
+    {
+      "id": "z",
+      "label": "Latent z",
+      "kind": "mechanism",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          1.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.94,
+          0.94,
+          0.94
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.7,
+            0.95,
+            1.0
+          ],
+          "width": 1.3,
+          "height": 0.8,
+          "eqn": "vae_z"
+        }
+      },
+      "content_tiers": {
+        "overview": "sample z (reparameterized)"
+      }
+    },
+    {
+      "id": "mu",
+      "label": "mu",
+      "kind": "head",
+      "parent": "z",
+      "placement": {
+        "pos": [
+          -2.2,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "mean of latent"
+      }
+    },
+    {
+      "id": "sig",
+      "label": "sigma",
+      "kind": "head",
+      "parent": "z",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            1.0,
+            0.7
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "std of latent"
+      }
+    },
+    {
+      "id": "eps",
+      "label": "z = mu + sigma . eps",
+      "kind": "head",
+      "parent": "z",
+      "placement": {
+        "pos": [
+          2.2,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.95,
+            0.85,
+            0.6
+          ],
+          "eqn": "vae_z"
+        }
+      },
+      "content_tiers": {
+        "overview": "reparameterization trick"
+      }
+    },
+    {
+      "id": "dec",
+      "label": "Decoder",
+      "kind": "output",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          4.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.91,
+          0.91,
+          0.91
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.95,
+            0.7,
+            0.4
+          ],
+          "eqn": "vae"
+        }
+      },
+      "content_tiers": {
+        "overview": "reconstruct the input"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "x",
+      "to": "enc",
+      "kind": "flow"
+    },
+    {
+      "from": "enc",
+      "to": "z",
+      "kind": "flow"
+    },
+    {
+      "from": "mu",
+      "to": "sig",
+      "kind": "flow"
+    },
+    {
+      "from": "sig",
+      "to": "eps",
+      "kind": "flow"
+    },
+    {
+      "from": "z",
+      "to": "dec",
+      "kind": "flow"
+    }
+  ],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      7.0,
+      3.6
+    ]
+  },
+  "provenance": {
+    "source": "modelarch:vae",
+    "hash": "035c34f86ba4088f617038193770fa74aa90403c399c5048029d1afcabe9727d",
+    "generated_at": "2026-06-29T14:05:36",
+    "generator": "model_architecture adapter"
+  }
+}

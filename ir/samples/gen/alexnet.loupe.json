@@ -1,0 +1,367 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "model",
+  "entities": [
+    {
+      "id": "model",
+      "label": "AlexNet (CNN)",
+      "kind": "model",
+      "parent": null,
+      "placement": {
+        "pos": [
+          0.0,
+          1.7,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 2.4,
+          "height": 1.1
+        }
+      },
+      "content_tiers": {
+        "overview": "Image classifier: 5 conv + 3 dense",
+        "detail": "ImageNet 224x224 to 1000 classes",
+        "deep": "conv-pool stack builds features; dense layers classify"
+      }
+    },
+    {
+      "id": "in",
+      "label": "Input 224x224x3",
+      "kind": "input",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -7.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.6,
+            0.95,
+            0.7
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "RGB image"
+      }
+    },
+    {
+      "id": "c1",
+      "label": "Conv1 + Pool",
+      "kind": "conv",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -4.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.97,
+          0.97,
+          0.97
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.5,
+            0.85,
+            1.0
+          ],
+          "note": "96@11x11",
+          "eqn": "conv"
+        }
+      },
+      "content_tiers": {
+        "overview": "96 filters 11x11"
+      }
+    },
+    {
+      "id": "c2",
+      "label": "Conv2 + Pool",
+      "kind": "conv",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -1.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.94,
+          0.94,
+          0.94
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.5,
+            0.85,
+            1.0
+          ],
+          "note": "256@5x5",
+          "eqn": "conv"
+        }
+      },
+      "content_tiers": {
+        "overview": "256 filters 5x5"
+      }
+    },
+    {
+      "id": "c3",
+      "label": "Conv3-5",
+      "kind": "conv",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          1.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.91,
+          0.91,
+          0.91
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.5,
+            0.85,
+            1.0
+          ],
+          "note": "384/384/256",
+          "eqn": "conv"
+        }
+      },
+      "content_tiers": {
+        "overview": "3 conv 3x3; dive to see convolution"
+      }
+    },
+    {
+      "id": "convmech",
+      "label": "convolution",
+      "kind": "head",
+      "parent": "c3",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "conv",
+        "data": {
+          "in": 9,
+          "k": 3,
+          "stride": 1,
+          "pad": 1,
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ],
+          "eqn": "conv"
+        }
+      },
+      "content_tiers": {
+        "overview": "kernel slides over padded input -> feature map"
+      }
+    },
+    {
+      "id": "fc6",
+      "label": "FC 4096",
+      "kind": "transform",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          4.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.88,
+          0.88,
+          0.88
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 9216,
+          "cols": 4096,
+          "accent": [
+            0.5,
+            0.95,
+            0.8
+          ],
+          "eqn": "fc"
+        }
+      },
+      "content_tiers": {
+        "overview": "flatten then dense"
+      }
+    },
+    {
+      "id": "fc8",
+      "label": "Classifier",
+      "kind": "output",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          7.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.85,
+          0.85,
+          0.85
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 4096,
+          "cols": 1000,
+          "accent": [
+            0.95,
+            0.7,
+            0.4
+          ],
+          "eqn": "softmax"
+        }
+      },
+      "content_tiers": {
+        "overview": "dense to 1000 classes"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "in",
+      "to": "c1",
+      "kind": "flow"
+    },
+    {
+      "from": "c1",
+      "to": "c2",
+      "kind": "flow"
+    },
+    {
+      "from": "c2",
+      "to": "c3",
+      "kind": "flow"
+    },
+    {
+      "from": "c3",
+      "to": "fc6",
+      "kind": "flow"
+    },
+    {
+      "from": "fc6",
+      "to": "fc8",
+      "kind": "flow"
+    }
+  ],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      7.0,
+      3.6
+    ]
+  },
+  "provenance": {
+    "source": "modelarch:alexnet",
+    "hash": "1529d8a4562c8b98618adc5ce9446c0e1d000fdcc1cc75f7837f0390de0034f4",
+    "generated_at": "2026-06-29T14:05:36",
+    "generator": "model_architecture adapter"
+  }
+}

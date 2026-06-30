@@ -1,0 +1,20 @@
+{
+  "version": "loupe-ir/v1", "root": "model",
+  "provenance": { "source": "hand-authored", "generated_at": "2026-06-29", "generator": "loupe mamba" },
+  "lod_policy": { "bands": 3, "distance_thresholds": [8.0, 3.6] },
+  "entities": [
+    { "id": "model", "label": "Mamba (SSM)", "kind": "model", "parent": null, "lod_band": 0, "placement": { "pos": [0,1.8,0] }, "payload": { "type": "text", "data": { "accent": [0.5,0.85,1.0], "width": 2.0, "height": 1.0 } }, "content_tiers": { "overview": "Sequence model with linear-time state-space scan (no attention)", "detail": "selective SSM: input-dependent A,B,C; O(n) over length", "deep": "carries a hidden state; recurrence h = Ah + Bx, y = Ch" } },
+    { "id": "emb", "label": "Embeddings", "kind": "input", "parent": "model", "lod_band": 1, "placement": { "pos": [-4,0,0] }, "payload": { "type": "matrix", "data": { "rows": 50000, "cols": 768, "accent": [0.5,0.9,0.7], "eqn": "embed" } }, "content_tiers": { "overview": "Token to vector" } },
+    { "id": "b1", "label": "Mamba Block", "kind": "mechanism", "parent": "model", "lod_band": 1, "placement": { "pos": [-1.4,0,0], "scale": [0.9,0.9,0.9] }, "payload": { "type": "text", "data": { "accent": [0.55,0.95,1.0], "width": 1.5, "height": 1.0, "eqn": "mamba_gate" } }, "content_tiers": { "overview": "Linear -> conv1d -> selective SSM -> gate", "detail": "dive to see projection, scan, and gating" } },
+    { "id": "b2", "label": "x N blocks", "kind": "block", "parent": "model", "lod_band": 1, "placement": { "pos": [1.4,0,0], "scale": [0.85,0.85,0.85] }, "payload": { "type": "text", "data": { "accent": [0.4,0.8,1.0], "width": 1.3, "height": 0.8 } }, "content_tiers": { "overview": "Stacked identical blocks + residual" } },
+    { "id": "out", "label": "Output Head", "kind": "output", "parent": "model", "lod_band": 1, "placement": { "pos": [3.4,0,0] }, "payload": { "type": "matrix", "data": { "rows": 768, "cols": 50000, "accent": [0.95,0.7,0.4], "eqn": "softmax" } }, "content_tiers": { "overview": "Hidden to vocab; softmax" } },
+    { "id": "proj", "label": "in-proj + conv", "kind": "head", "parent": "b1", "lod_band": 2, "placement": { "pos": [-1.4,0,0], "scale": [0.6,0.6,0.6] }, "payload": { "type": "text", "data": { "accent": [0.7,0.9,1.0], "width": 1.0, "height": 0.5, "eqn": "fc" } }, "content_tiers": { "overview": "Expand + depthwise conv1d" } },
+    { "id": "scan", "label": "selective scan", "kind": "head", "parent": "b1", "lod_band": 2, "placement": { "pos": [0,0,0], "scale": [0.9,0.9,0.9] }, "payload": { "type": "conv", "data": { "in": 8, "k": 1, "stride": 1, "pad": 0, "accent": [0.6,0.9,1.0], "eqn": "ssm" } }, "content_tiers": { "overview": "State-space recurrence h=Ah+Bx, y=Ch" } },
+    { "id": "gate", "label": "gate", "kind": "head", "parent": "b1", "lod_band": 2, "placement": { "pos": [1.4,0,0], "scale": [0.6,0.6,0.6] }, "payload": { "type": "text", "data": { "accent": [0.95,0.85,0.6], "width": 1.0, "height": 0.5, "eqn": "mamba_gate" } }, "content_tiers": { "overview": "SiLU gate, then project out" } }
+  ],
+  "relations": [
+    { "from": "emb", "to": "b1", "kind": "flow" }, { "from": "b1", "to": "b2", "kind": "flow" }, { "from": "b2", "to": "out", "kind": "flow" },
+    { "from": "proj", "to": "scan", "kind": "flow" }, { "from": "scan", "to": "gate", "kind": "flow" }
+  ]
+}
+

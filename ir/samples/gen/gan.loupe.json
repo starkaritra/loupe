@@ -1,0 +1,229 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "model",
+  "entities": [
+    {
+      "id": "model",
+      "label": "GAN",
+      "kind": "model",
+      "parent": null,
+      "placement": {
+        "pos": [
+          0.0,
+          1.7,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 2.4,
+          "height": 1.1
+        }
+      },
+      "content_tiers": {
+        "overview": "Generator vs Discriminator, trained adversarially",
+        "detail": "G makes fakes from noise; D tells real from fake",
+        "deep": "G improves until D can't distinguish"
+      }
+    },
+    {
+      "id": "z",
+      "label": "Noise z",
+      "kind": "input",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -3.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.7
+          ],
+          "width": 1.1,
+          "height": 0.6,
+          "eqn": "gan_g"
+        }
+      },
+      "content_tiers": {
+        "overview": "random latent vector"
+      }
+    },
+    {
+      "id": "g",
+      "label": "Generator",
+      "kind": "mechanism",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.97,
+          0.97,
+          0.97
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.5,
+            0.85,
+            1.0
+          ],
+          "eqn": "gan_g"
+        }
+      },
+      "content_tiers": {
+        "overview": "noise to a fake image"
+      }
+    },
+    {
+      "id": "gu",
+      "label": "upsample blocks",
+      "kind": "head",
+      "parent": "g",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "glow": 0.5,
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "transpose-conv upsampling"
+      }
+    },
+    {
+      "id": "d",
+      "label": "Discriminator",
+      "kind": "output",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          3.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.94,
+          0.94,
+          0.94
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "accent": [
+            0.95,
+            0.7,
+            0.4
+          ],
+          "eqn": "gan_d"
+        }
+      },
+      "content_tiers": {
+        "overview": "real (1) vs fake (0)"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "z",
+      "to": "g",
+      "kind": "flow"
+    },
+    {
+      "from": "g",
+      "to": "d",
+      "kind": "flow"
+    }
+  ],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      7.0,
+      3.6
+    ]
+  },
+  "provenance": {
+    "source": "modelarch:gan",
+    "hash": "fdc27161ac383da59ef9b44dbb96b9437302b16189b442560ed440b6b3f23eb9",
+    "generated_at": "2026-06-29T14:05:36",
+    "generator": "model_architecture adapter"
+  }
+}

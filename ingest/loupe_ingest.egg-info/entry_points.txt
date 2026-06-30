@@ -1,0 +1,2 @@
+[console_scripts]
+loupe-ingest = loupe_ingest.cli:main

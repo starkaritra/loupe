@@ -1,0 +1,1004 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "model",
+  "entities": [
+    {
+      "id": "model",
+      "label": "BERT (encoder)",
+      "kind": "model",
+      "parent": null,
+      "placement": {
+        "pos": [
+          0.0,
+          1.7,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 2.4,
+          "height": 1.1
+        }
+      },
+      "content_tiers": {
+        "overview": "Bidirectional encoder; masked-language pretraining",
+        "detail": "12 layers; 12 heads; width 768",
+        "deep": "every token attends to every other (no causal mask)"
+      }
+    },
+    {
+      "id": "emb",
+      "label": "Token + Segment + Pos",
+      "kind": "input",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -4.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 50257,
+          "cols": 768,
+          "accent": [
+            0.5,
+            0.9,
+            0.7
+          ],
+          "eqn": "embed"
+        }
+      },
+      "content_tiers": {
+        "overview": "word + segment + position embeddings"
+      }
+    },
+    {
+      "id": "attn",
+      "label": "Self-Attention",
+      "kind": "mechanism",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -1.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.97,
+          0.97,
+          0.97
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.55,
+            0.95,
+            1.0
+          ],
+          "width": 1.4,
+          "height": 0.9,
+          "eqn": "attention"
+        }
+      },
+      "content_tiers": {
+        "overview": "bidirectional attention"
+      }
+    },
+    {
+      "id": "attn_mech",
+      "label": "Self-Attention",
+      "kind": "mechanism",
+      "parent": "attn",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.85,
+          0.85,
+          0.85
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "attention",
+        "data": {
+          "seq": 8,
+          "d_model": 768,
+          "n_heads": 12,
+          "accent": [
+            0.55,
+            0.95,
+            1.0
+          ],
+          "eqn": "attention"
+        }
+      },
+      "content_tiers": {
+        "overview": "bidirectional attention"
+      }
+    },
+    {
+      "id": "h0",
+      "label": "",
+      "kind": "head",
+      "parent": "attn_mech",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          2.25
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "lod_band": 3,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "glow": 0.45,
+          "values": [
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "head 0"
+      }
+    },
+    {
+      "id": "h1",
+      "label": "",
+      "kind": "head",
+      "parent": "attn_mech",
+      "placement": {
+        "pos": [
+          0.06,
+          0.0,
+          1.35
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "lod_band": 3,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "glow": 0.45,
+          "values": [
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "head 1"
+      }
+    },
+    {
+      "id": "h2",
+      "label": "",
+      "kind": "head",
+      "parent": "attn_mech",
+      "placement": {
+        "pos": [
+          0.12,
+          0.0,
+          0.44999999999999996
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "lod_band": 3,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "glow": 0.45,
+          "values": [
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "head 2"
+      }
+    },
+    {
+      "id": "h3",
+      "label": "",
+      "kind": "head",
+      "parent": "attn_mech",
+      "placement": {
+        "pos": [
+          0.18,
+          0.0,
+          -0.4500000000000002
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "lod_band": 3,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "glow": 0.45,
+          "values": [
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "head 3"
+      }
+    },
+    {
+      "id": "h4",
+      "label": "",
+      "kind": "head",
+      "parent": "attn_mech",
+      "placement": {
+        "pos": [
+          0.24,
+          0.0,
+          -1.35
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "lod_band": 3,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "glow": 0.45,
+          "values": [
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "head 4"
+      }
+    },
+    {
+      "id": "h5",
+      "label": "",
+      "kind": "head",
+      "parent": "attn_mech",
+      "placement": {
+        "pos": [
+          0.3,
+          0.0,
+          -2.25
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "lod_band": 3,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "square": true,
+          "glow": 0.45,
+          "values": [
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "accent": [
+            0.6,
+            0.9,
+            1.0
+          ]
+        }
+      },
+      "content_tiers": {
+        "overview": "head 5"
+      }
+    },
+    {
+      "id": "mlp",
+      "label": "Feed-Forward",
+      "kind": "transform",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          1.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.94,
+          0.94,
+          0.94
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 768,
+          "cols": 3072,
+          "accent": [
+            0.5,
+            0.95,
+            0.8
+          ],
+          "eqn": "mlp"
+        }
+      },
+      "content_tiers": {
+        "overview": "per-token MLP"
+      }
+    },
+    {
+      "id": "mlm",
+      "label": "MLM Head",
+      "kind": "output",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          4.5,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.91,
+          0.91,
+          0.91
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 768,
+          "cols": 50257,
+          "accent": [
+            0.95,
+            0.7,
+            0.4
+          ],
+          "eqn": "mlm"
+        }
+      },
+      "content_tiers": {
+        "overview": "predict masked tokens"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "emb",
+      "to": "attn",
+      "kind": "flow"
+    },
+    {
+      "from": "attn",
+      "to": "mlp",
+      "kind": "flow"
+    },
+    {
+      "from": "mlp",
+      "to": "mlm",
+      "kind": "flow"
+    }
+  ],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      7.0,
+      3.6
+    ]
+  },
+  "provenance": {
+    "source": "modelarch:bert",
+    "hash": "2f30b9f4936d9e45218f2d54a04b7cff9972c1fd76bf6145fc4b30e548fad5fb",
+    "generated_at": "2026-06-29T14:05:36",
+    "generator": "model_architecture adapter"
+  }
+}

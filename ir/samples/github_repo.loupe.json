@@ -1,0 +1,6357 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "repo",
+  "entities": [
+    {
+      "id": "repo",
+      "label": "pallets/flask",
+      "kind": "repository",
+      "parent": null,
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.85,
+            1.0
+          ],
+          "width": 2.6,
+          "height": 1.3
+        }
+      },
+      "content_tiers": {
+        "overview": "pallets/flask",
+        "detail": "The Python micro framework for building web applications.",
+        "deep": "branch main \u00b7 287 entries"
+      }
+    },
+    {
+      "id": "f__devcontainer",
+      "label": ".devcontainer",
+      "kind": "dir",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": ".devcontainer"
+      }
+    },
+    {
+      "id": "f__devcontainer__devcontainer_json",
+      "label": "devcontainer.json",
+      "kind": "file",
+      "parent": "f__devcontainer",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "devcontainer.json"
+      }
+    },
+    {
+      "id": "f__devcontainer__on_create_command_sh",
+      "label": "on-create-command.sh",
+      "kind": "file",
+      "parent": "f__devcontainer",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "on-create-command.sh"
+      }
+    },
+    {
+      "id": "f__editorconfig",
+      "label": ".editorconfig",
+      "kind": "file",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": ".editorconfig"
+      }
+    },
+    {
+      "id": "f__github",
+      "label": ".github",
+      "kind": "dir",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": ".github"
+      }
+    },
+    {
+      "id": "f__github__ISSUE_TEMPLATE",
+      "label": "ISSUE_TEMPLATE",
+      "kind": "dir",
+      "parent": "f__github",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "ISSUE_TEMPLATE"
+      }
+    },
+    {
+      "id": "f__github__ISSUE_TEMPLATE__bug_report_md",
+      "label": "bug-report.md",
+      "kind": "file",
+      "parent": "f__github__ISSUE_TEMPLATE",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "bug-report.md"
+      }
+    },
+    {
+      "id": "f__github__ISSUE_TEMPLATE__config_yml",
+      "label": "config.yml",
+      "kind": "file",
+      "parent": "f__github__ISSUE_TEMPLATE",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "config.yml"
+      }
+    },
+    {
+      "id": "f__github__ISSUE_TEMPLATE__feature_request_md",
+      "label": "feature-request.md",
+      "kind": "file",
+      "parent": "f__github__ISSUE_TEMPLATE",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "feature-request.md"
+      }
+    },
+    {
+      "id": "f__github__pull_request_template_md",
+      "label": "pull_request_template.md",
+      "kind": "file",
+      "parent": "f__github",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "pull_request_template.md"
+      }
+    },
+    {
+      "id": "f__github__workflows",
+      "label": "workflows",
+      "kind": "dir",
+      "parent": "f__github",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "workflows"
+      }
+    },
+    {
+      "id": "f__github__workflows__lock_yaml",
+      "label": "lock.yaml",
+      "kind": "file",
+      "parent": "f__github__workflows",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "lock.yaml"
+      }
+    },
+    {
+      "id": "f__github__workflows__pre_commit_yaml",
+      "label": "pre-commit.yaml",
+      "kind": "file",
+      "parent": "f__github__workflows",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "pre-commit.yaml"
+      }
+    },
+    {
+      "id": "f__github__workflows__publish_yaml",
+      "label": "publish.yaml",
+      "kind": "file",
+      "parent": "f__github__workflows",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "publish.yaml"
+      }
+    },
+    {
+      "id": "f__github__workflows__tests_yaml",
+      "label": "tests.yaml",
+      "kind": "file",
+      "parent": "f__github__workflows",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "tests.yaml"
+      }
+    },
+    {
+      "id": "f__github__workflows__zizmor_yaml",
+      "label": "zizmor.yaml",
+      "kind": "file",
+      "parent": "f__github__workflows",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "zizmor.yaml"
+      }
+    },
+    {
+      "id": "f__gitignore",
+      "label": ".gitignore",
+      "kind": "file",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": ".gitignore"
+      }
+    },
+    {
+      "id": "f__pre_commit_config_yaml",
+      "label": ".pre-commit-config.yaml",
+      "kind": "file",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": ".pre-commit-config.yaml"
+      }
+    },
+    {
+      "id": "f__readthedocs_yaml",
+      "label": ".readthedocs.yaml",
+      "kind": "file",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": ".readthedocs.yaml"
+      }
+    },
+    {
+      "id": "f_CHANGES_rst",
+      "label": "CHANGES.rst",
+      "kind": "file",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "CHANGES.rst"
+      }
+    },
+    {
+      "id": "f_LICENSE_txt",
+      "label": "LICENSE.txt",
+      "kind": "file",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "LICENSE.txt"
+      }
+    },
+    {
+      "id": "f_README_md",
+      "label": "README.md",
+      "kind": "file",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "README.md"
+      }
+    },
+    {
+      "id": "f_docs",
+      "label": "docs",
+      "kind": "dir",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "docs"
+      }
+    },
+    {
+      "id": "f_docs__Makefile",
+      "label": "Makefile",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "Makefile"
+      }
+    },
+    {
+      "id": "f_docs___static",
+      "label": "_static",
+      "kind": "dir",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "_static"
+      }
+    },
+    {
+      "id": "f_docs___static__debugger_png",
+      "label": "debugger.png",
+      "kind": "file",
+      "parent": "f_docs___static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "debugger.png"
+      }
+    },
+    {
+      "id": "f_docs___static__flask_icon_svg",
+      "label": "flask-icon.svg",
+      "kind": "file",
+      "parent": "f_docs___static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "flask-icon.svg"
+      }
+    },
+    {
+      "id": "f_docs___static__flask_logo_svg",
+      "label": "flask-logo.svg",
+      "kind": "file",
+      "parent": "f_docs___static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "flask-logo.svg"
+      }
+    },
+    {
+      "id": "f_docs___static__flask_name_svg",
+      "label": "flask-name.svg",
+      "kind": "file",
+      "parent": "f_docs___static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "flask-name.svg"
+      }
+    },
+    {
+      "id": "f_docs___static__pycharm_run_config_png",
+      "label": "pycharm-run-config.png",
+      "kind": "file",
+      "parent": "f_docs___static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "pycharm-run-config.png"
+      }
+    },
+    {
+      "id": "f_docs__api_rst",
+      "label": "api.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "api.rst"
+      }
+    },
+    {
+      "id": "f_docs__appcontext_rst",
+      "label": "appcontext.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "appcontext.rst"
+      }
+    },
+    {
+      "id": "f_docs__async_await_rst",
+      "label": "async-await.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "async-await.rst"
+      }
+    },
+    {
+      "id": "f_docs__blueprints_rst",
+      "label": "blueprints.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "blueprints.rst"
+      }
+    },
+    {
+      "id": "f_docs__changes_rst",
+      "label": "changes.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "changes.rst"
+      }
+    },
+    {
+      "id": "f_docs__cli_rst",
+      "label": "cli.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "cli.rst"
+      }
+    },
+    {
+      "id": "f_docs__conf_py",
+      "label": "conf.py",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "conf.py"
+      }
+    },
+    {
+      "id": "f_docs__config_rst",
+      "label": "config.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "config.rst"
+      }
+    },
+    {
+      "id": "f_docs__contributing_rst",
+      "label": "contributing.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "contributing.rst"
+      }
+    },
+    {
+      "id": "f_docs__debugging_rst",
+      "label": "debugging.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "debugging.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying",
+      "label": "deploying",
+      "kind": "dir",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "deploying"
+      }
+    },
+    {
+      "id": "f_docs__deploying__apache_httpd_rst",
+      "label": "apache-httpd.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "apache-httpd.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying__asgi_rst",
+      "label": "asgi.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "asgi.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying__eventlet_rst",
+      "label": "eventlet.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "eventlet.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying__gevent_rst",
+      "label": "gevent.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "gevent.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying__gunicorn_rst",
+      "label": "gunicorn.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "gunicorn.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying__index_rst",
+      "label": "index.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "index.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying__mod_wsgi_rst",
+      "label": "mod_wsgi.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "mod_wsgi.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying__nginx_rst",
+      "label": "nginx.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "nginx.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying__proxy_fix_rst",
+      "label": "proxy_fix.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "proxy_fix.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying__uwsgi_rst",
+      "label": "uwsgi.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "uwsgi.rst"
+      }
+    },
+    {
+      "id": "f_docs__deploying__waitress_rst",
+      "label": "waitress.rst",
+      "kind": "file",
+      "parent": "f_docs__deploying",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "waitress.rst"
+      }
+    },
+    {
+      "id": "f_docs__design_rst",
+      "label": "design.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "design.rst"
+      }
+    },
+    {
+      "id": "f_docs__errorhandling_rst",
+      "label": "errorhandling.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "errorhandling.rst"
+      }
+    },
+    {
+      "id": "f_docs__extensiondev_rst",
+      "label": "extensiondev.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "extensiondev.rst"
+      }
+    },
+    {
+      "id": "f_docs__extensions_rst",
+      "label": "extensions.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "extensions.rst"
+      }
+    },
+    {
+      "id": "f_docs__gevent_rst",
+      "label": "gevent.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "gevent.rst"
+      }
+    },
+    {
+      "id": "f_docs__index_rst",
+      "label": "index.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "index.rst"
+      }
+    },
+    {
+      "id": "f_docs__installation_rst",
+      "label": "installation.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "installation.rst"
+      }
+    },
+    {
+      "id": "f_docs__license_rst",
+      "label": "license.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "license.rst"
+      }
+    },
+    {
+      "id": "f_docs__lifecycle_rst",
+      "label": "lifecycle.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "lifecycle.rst"
+      }
+    },
+    {
+      "id": "f_docs__logging_rst",
+      "label": "logging.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "logging.rst"
+      }
+    },
+    {
+      "id": "f_docs__make_bat",
+      "label": "make.bat",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "make.bat"
+      }
+    },
+    {
+      "id": "f_docs__patterns",
+      "label": "patterns",
+      "kind": "dir",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "patterns"
+      }
+    },
+    {
+      "id": "f_docs__patterns__appdispatch_rst",
+      "label": "appdispatch.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "appdispatch.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__appfactories_rst",
+      "label": "appfactories.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "appfactories.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__caching_rst",
+      "label": "caching.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "caching.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__celery_rst",
+      "label": "celery.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "celery.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__deferredcallbacks_rst",
+      "label": "deferredcallbacks.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "deferredcallbacks.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__favicon_rst",
+      "label": "favicon.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "favicon.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__fileuploads_rst",
+      "label": "fileuploads.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "fileuploads.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__flashing_rst",
+      "label": "flashing.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "flashing.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__index_rst",
+      "label": "index.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "index.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__javascript_rst",
+      "label": "javascript.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "javascript.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__jquery_rst",
+      "label": "jquery.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "jquery.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__lazyloading_rst",
+      "label": "lazyloading.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "lazyloading.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__methodoverrides_rst",
+      "label": "methodoverrides.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "methodoverrides.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__mongoengine_rst",
+      "label": "mongoengine.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "mongoengine.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__packages_rst",
+      "label": "packages.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "packages.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__requestchecksum_rst",
+      "label": "requestchecksum.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "requestchecksum.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__singlepageapplications_rst",
+      "label": "singlepageapplications.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "singlepageapplications.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__sqlalchemy_rst",
+      "label": "sqlalchemy.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "sqlalchemy.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__sqlite3_rst",
+      "label": "sqlite3.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "sqlite3.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__streaming_rst",
+      "label": "streaming.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "streaming.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__subclassing_rst",
+      "label": "subclassing.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "subclassing.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__templateinheritance_rst",
+      "label": "templateinheritance.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "templateinheritance.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__urlprocessors_rst",
+      "label": "urlprocessors.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "urlprocessors.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__viewdecorators_rst",
+      "label": "viewdecorators.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "viewdecorators.rst"
+      }
+    },
+    {
+      "id": "f_docs__patterns__wtforms_rst",
+      "label": "wtforms.rst",
+      "kind": "file",
+      "parent": "f_docs__patterns",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "wtforms.rst"
+      }
+    },
+    {
+      "id": "f_docs__quickstart_rst",
+      "label": "quickstart.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "quickstart.rst"
+      }
+    },
+    {
+      "id": "f_docs__reqcontext_rst",
+      "label": "reqcontext.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "reqcontext.rst"
+      }
+    },
+    {
+      "id": "f_docs__server_rst",
+      "label": "server.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "server.rst"
+      }
+    },
+    {
+      "id": "f_docs__shell_rst",
+      "label": "shell.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "shell.rst"
+      }
+    },
+    {
+      "id": "f_docs__signals_rst",
+      "label": "signals.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "signals.rst"
+      }
+    },
+    {
+      "id": "f_docs__templating_rst",
+      "label": "templating.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "templating.rst"
+      }
+    },
+    {
+      "id": "f_docs__testing_rst",
+      "label": "testing.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "testing.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial",
+      "label": "tutorial",
+      "kind": "dir",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "tutorial"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__blog_rst",
+      "label": "blog.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "blog.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__database_rst",
+      "label": "database.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "database.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__deploy_rst",
+      "label": "deploy.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "deploy.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__factory_rst",
+      "label": "factory.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "factory.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__flaskr_edit_png",
+      "label": "flaskr_edit.png",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "flaskr_edit.png"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__flaskr_index_png",
+      "label": "flaskr_index.png",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "flaskr_index.png"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__flaskr_login_png",
+      "label": "flaskr_login.png",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "flaskr_login.png"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__index_rst",
+      "label": "index.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "index.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__install_rst",
+      "label": "install.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "install.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__layout_rst",
+      "label": "layout.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "layout.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__next_rst",
+      "label": "next.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "next.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__static_rst",
+      "label": "static.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "static.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__templates_rst",
+      "label": "templates.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "templates.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__tests_rst",
+      "label": "tests.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "tests.rst"
+      }
+    },
+    {
+      "id": "f_docs__tutorial__views_rst",
+      "label": "views.rst",
+      "kind": "file",
+      "parent": "f_docs__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "views.rst"
+      }
+    },
+    {
+      "id": "f_docs__views_rst",
+      "label": "views.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "views.rst"
+      }
+    },
+    {
+      "id": "f_docs__web_security_rst",
+      "label": "web-security.rst",
+      "kind": "file",
+      "parent": "f_docs",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "web-security.rst"
+      }
+    },
+    {
+      "id": "f_examples",
+      "label": "examples",
+      "kind": "dir",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "examples"
+      }
+    },
+    {
+      "id": "f_examples__celery",
+      "label": "celery",
+      "kind": "dir",
+      "parent": "f_examples",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "celery"
+      }
+    },
+    {
+      "id": "f_examples__celery__README_md",
+      "label": "README.md",
+      "kind": "file",
+      "parent": "f_examples__celery",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "README.md"
+      }
+    },
+    {
+      "id": "f_examples__celery__make_celery_py",
+      "label": "make_celery.py",
+      "kind": "file",
+      "parent": "f_examples__celery",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "make_celery.py"
+      }
+    },
+    {
+      "id": "f_examples__celery__pyproject_toml",
+      "label": "pyproject.toml",
+      "kind": "file",
+      "parent": "f_examples__celery",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "pyproject.toml"
+      }
+    },
+    {
+      "id": "f_examples__celery__requirements_txt",
+      "label": "requirements.txt",
+      "kind": "file",
+      "parent": "f_examples__celery",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "requirements.txt"
+      }
+    },
+    {
+      "id": "f_examples__celery__src",
+      "label": "src",
+      "kind": "dir",
+      "parent": "f_examples__celery",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "src"
+      }
+    },
+    {
+      "id": "f_examples__celery__src__task_app",
+      "label": "task_app",
+      "kind": "dir",
+      "parent": "f_examples__celery__src",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "task_app"
+      }
+    },
+    {
+      "id": "f_examples__celery__src__task_app____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_examples__celery__src__task_app",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_examples__celery__src__task_app__tasks_py",
+      "label": "tasks.py",
+      "kind": "file",
+      "parent": "f_examples__celery__src__task_app",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "tasks.py"
+      }
+    },
+    {
+      "id": "f_examples__celery__src__task_app__templates",
+      "label": "templates",
+      "kind": "dir",
+      "parent": "f_examples__celery__src__task_app",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "templates"
+      }
+    },
+    {
+      "id": "f_examples__celery__src__task_app__templates__index_html",
+      "label": "index.html",
+      "kind": "file",
+      "parent": "f_examples__celery__src__task_app__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "index.html"
+      }
+    },
+    {
+      "id": "f_examples__celery__src__task_app__views_py",
+      "label": "views.py",
+      "kind": "file",
+      "parent": "f_examples__celery__src__task_app",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "views.py"
+      }
+    },
+    {
+      "id": "f_examples__javascript",
+      "label": "javascript",
+      "kind": "dir",
+      "parent": "f_examples",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "javascript"
+      }
+    },
+    {
+      "id": "f_examples__javascript___gitignore",
+      "label": ".gitignore",
+      "kind": "file",
+      "parent": "f_examples__javascript",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": ".gitignore"
+      }
+    },
+    {
+      "id": "f_examples__javascript__LICENSE_txt",
+      "label": "LICENSE.txt",
+      "kind": "file",
+      "parent": "f_examples__javascript",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "LICENSE.txt"
+      }
+    },
+    {
+      "id": "f_examples__javascript__README_rst",
+      "label": "README.rst",
+      "kind": "file",
+      "parent": "f_examples__javascript",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "README.rst"
+      }
+    },
+    {
+      "id": "f_examples__javascript__js_example",
+      "label": "js_example",
+      "kind": "dir",
+      "parent": "f_examples__javascript",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "js_example"
+      }
+    },
+    {
+      "id": "f_examples__javascript__js_example____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_examples__javascript__js_example",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_examples__javascript__js_example__templates",
+      "label": "templates",
+      "kind": "dir",
+      "parent": "f_examples__javascript__js_example",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "templates"
+      }
+    },
+    {
+      "id": "f_examples__javascript__js_example__templates__base_html",
+      "label": "base.html",
+      "kind": "file",
+      "parent": "f_examples__javascript__js_example__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "base.html"
+      }
+    },
+    {
+      "id": "f_examples__javascript__js_example__templates__fetch_html",
+      "label": "fetch.html",
+      "kind": "file",
+      "parent": "f_examples__javascript__js_example__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "fetch.html"
+      }
+    },
+    {
+      "id": "f_examples__javascript__js_example__templates__jquery_html",
+      "label": "jquery.html",
+      "kind": "file",
+      "parent": "f_examples__javascript__js_example__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "jquery.html"
+      }
+    },
+    {
+      "id": "f_examples__javascript__js_example__templates__xhr_html",
+      "label": "xhr.html",
+      "kind": "file",
+      "parent": "f_examples__javascript__js_example__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "xhr.html"
+      }
+    },
+    {
+      "id": "f_examples__javascript__js_example__views_py",
+      "label": "views.py",
+      "kind": "file",
+      "parent": "f_examples__javascript__js_example",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "views.py"
+      }
+    },
+    {
+      "id": "f_examples__javascript__pyproject_toml",
+      "label": "pyproject.toml",
+      "kind": "file",
+      "parent": "f_examples__javascript",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "pyproject.toml"
+      }
+    },
+    {
+      "id": "f_examples__javascript__tests",
+      "label": "tests",
+      "kind": "dir",
+      "parent": "f_examples__javascript",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "tests"
+      }
+    },
+    {
+      "id": "f_examples__javascript__tests__conftest_py",
+      "label": "conftest.py",
+      "kind": "file",
+      "parent": "f_examples__javascript__tests",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "conftest.py"
+      }
+    },
+    {
+      "id": "f_examples__javascript__tests__test_js_example_py",
+      "label": "test_js_example.py",
+      "kind": "file",
+      "parent": "f_examples__javascript__tests",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_js_example.py"
+      }
+    },
+    {
+      "id": "f_examples__tutorial",
+      "label": "tutorial",
+      "kind": "dir",
+      "parent": "f_examples",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "tutorial"
+      }
+    },
+    {
+      "id": "f_examples__tutorial___gitignore",
+      "label": ".gitignore",
+      "kind": "file",
+      "parent": "f_examples__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": ".gitignore"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__LICENSE_txt",
+      "label": "LICENSE.txt",
+      "kind": "file",
+      "parent": "f_examples__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "LICENSE.txt"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__README_rst",
+      "label": "README.rst",
+      "kind": "file",
+      "parent": "f_examples__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "README.rst"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr",
+      "label": "flaskr",
+      "kind": "dir",
+      "parent": "f_examples__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "flaskr"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__auth_py",
+      "label": "auth.py",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "auth.py"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__blog_py",
+      "label": "blog.py",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "blog.py"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__db_py",
+      "label": "db.py",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "db.py"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__schema_sql",
+      "label": "schema.sql",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "schema.sql"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__static",
+      "label": "static",
+      "kind": "dir",
+      "parent": "f_examples__tutorial__flaskr",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "static"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__static__style_css",
+      "label": "style.css",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr__static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "style.css"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__templates",
+      "label": "templates",
+      "kind": "dir",
+      "parent": "f_examples__tutorial__flaskr",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "templates"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__templates__auth",
+      "label": "auth",
+      "kind": "dir",
+      "parent": "f_examples__tutorial__flaskr__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "auth"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__templates__auth__login_html",
+      "label": "login.html",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr__templates__auth",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "login.html"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__templates__auth__register_html",
+      "label": "register.html",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr__templates__auth",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "register.html"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__templates__base_html",
+      "label": "base.html",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "base.html"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__templates__blog",
+      "label": "blog",
+      "kind": "dir",
+      "parent": "f_examples__tutorial__flaskr__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "blog"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__templates__blog__create_html",
+      "label": "create.html",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr__templates__blog",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "create.html"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__templates__blog__index_html",
+      "label": "index.html",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr__templates__blog",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "index.html"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__flaskr__templates__blog__update_html",
+      "label": "update.html",
+      "kind": "file",
+      "parent": "f_examples__tutorial__flaskr__templates__blog",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "update.html"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__pyproject_toml",
+      "label": "pyproject.toml",
+      "kind": "file",
+      "parent": "f_examples__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "pyproject.toml"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__tests",
+      "label": "tests",
+      "kind": "dir",
+      "parent": "f_examples__tutorial",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "tests"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__tests__conftest_py",
+      "label": "conftest.py",
+      "kind": "file",
+      "parent": "f_examples__tutorial__tests",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "conftest.py"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__tests__data_sql",
+      "label": "data.sql",
+      "kind": "file",
+      "parent": "f_examples__tutorial__tests",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "data.sql"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__tests__test_auth_py",
+      "label": "test_auth.py",
+      "kind": "file",
+      "parent": "f_examples__tutorial__tests",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_auth.py"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__tests__test_blog_py",
+      "label": "test_blog.py",
+      "kind": "file",
+      "parent": "f_examples__tutorial__tests",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_blog.py"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__tests__test_db_py",
+      "label": "test_db.py",
+      "kind": "file",
+      "parent": "f_examples__tutorial__tests",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_db.py"
+      }
+    },
+    {
+      "id": "f_examples__tutorial__tests__test_factory_py",
+      "label": "test_factory.py",
+      "kind": "file",
+      "parent": "f_examples__tutorial__tests",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_factory.py"
+      }
+    },
+    {
+      "id": "f_pyproject_toml",
+      "label": "pyproject.toml",
+      "kind": "file",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "pyproject.toml"
+      }
+    },
+    {
+      "id": "f_src",
+      "label": "src",
+      "kind": "dir",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "src"
+      }
+    },
+    {
+      "id": "f_src__flask",
+      "label": "flask",
+      "kind": "dir",
+      "parent": "f_src",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "flask"
+      }
+    },
+    {
+      "id": "f_src__flask____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_src__flask____main___py",
+      "label": "__main__.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__main__.py"
+      }
+    },
+    {
+      "id": "f_src__flask__app_py",
+      "label": "app.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "app.py"
+      }
+    },
+    {
+      "id": "f_src__flask__blueprints_py",
+      "label": "blueprints.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "blueprints.py"
+      }
+    },
+    {
+      "id": "f_src__flask__cli_py",
+      "label": "cli.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "cli.py"
+      }
+    },
+    {
+      "id": "f_src__flask__config_py",
+      "label": "config.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "config.py"
+      }
+    },
+    {
+      "id": "f_src__flask__ctx_py",
+      "label": "ctx.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "ctx.py"
+      }
+    },
+    {
+      "id": "f_src__flask__debughelpers_py",
+      "label": "debughelpers.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "debughelpers.py"
+      }
+    },
+    {
+      "id": "f_src__flask__globals_py",
+      "label": "globals.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "globals.py"
+      }
+    },
+    {
+      "id": "f_src__flask__helpers_py",
+      "label": "helpers.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "helpers.py"
+      }
+    },
+    {
+      "id": "f_src__flask__json",
+      "label": "json",
+      "kind": "dir",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "json"
+      }
+    },
+    {
+      "id": "f_src__flask__json____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_src__flask__json",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_src__flask__json__provider_py",
+      "label": "provider.py",
+      "kind": "file",
+      "parent": "f_src__flask__json",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "provider.py"
+      }
+    },
+    {
+      "id": "f_src__flask__json__tag_py",
+      "label": "tag.py",
+      "kind": "file",
+      "parent": "f_src__flask__json",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "tag.py"
+      }
+    },
+    {
+      "id": "f_src__flask__logging_py",
+      "label": "logging.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "logging.py"
+      }
+    },
+    {
+      "id": "f_src__flask__py_typed",
+      "label": "py.typed",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "py.typed"
+      }
+    },
+    {
+      "id": "f_src__flask__sansio",
+      "label": "sansio",
+      "kind": "dir",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "sansio"
+      }
+    },
+    {
+      "id": "f_src__flask__sansio__README_md",
+      "label": "README.md",
+      "kind": "file",
+      "parent": "f_src__flask__sansio",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "README.md"
+      }
+    },
+    {
+      "id": "f_src__flask__sansio__app_py",
+      "label": "app.py",
+      "kind": "file",
+      "parent": "f_src__flask__sansio",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "app.py"
+      }
+    },
+    {
+      "id": "f_src__flask__sansio__blueprints_py",
+      "label": "blueprints.py",
+      "kind": "file",
+      "parent": "f_src__flask__sansio",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "blueprints.py"
+      }
+    },
+    {
+      "id": "f_src__flask__sansio__scaffold_py",
+      "label": "scaffold.py",
+      "kind": "file",
+      "parent": "f_src__flask__sansio",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "scaffold.py"
+      }
+    },
+    {
+      "id": "f_src__flask__sessions_py",
+      "label": "sessions.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "sessions.py"
+      }
+    },
+    {
+      "id": "f_src__flask__signals_py",
+      "label": "signals.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "signals.py"
+      }
+    },
+    {
+      "id": "f_src__flask__templating_py",
+      "label": "templating.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "templating.py"
+      }
+    },
+    {
+      "id": "f_src__flask__testing_py",
+      "label": "testing.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "testing.py"
+      }
+    },
+    {
+      "id": "f_src__flask__typing_py",
+      "label": "typing.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "typing.py"
+      }
+    },
+    {
+      "id": "f_src__flask__views_py",
+      "label": "views.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "views.py"
+      }
+    },
+    {
+      "id": "f_src__flask__wrappers_py",
+      "label": "wrappers.py",
+      "kind": "file",
+      "parent": "f_src__flask",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "wrappers.py"
+      }
+    },
+    {
+      "id": "f_tests",
+      "label": "tests",
+      "kind": "dir",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "tests"
+      }
+    },
+    {
+      "id": "f_tests__conftest_py",
+      "label": "conftest.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "conftest.py"
+      }
+    },
+    {
+      "id": "f_tests__static",
+      "label": "static",
+      "kind": "dir",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "static"
+      }
+    },
+    {
+      "id": "f_tests__static__config_json",
+      "label": "config.json",
+      "kind": "file",
+      "parent": "f_tests__static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "config.json"
+      }
+    },
+    {
+      "id": "f_tests__static__config_toml",
+      "label": "config.toml",
+      "kind": "file",
+      "parent": "f_tests__static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "config.toml"
+      }
+    },
+    {
+      "id": "f_tests__static__index_html",
+      "label": "index.html",
+      "kind": "file",
+      "parent": "f_tests__static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "index.html"
+      }
+    },
+    {
+      "id": "f_tests__templates",
+      "label": "templates",
+      "kind": "dir",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "templates"
+      }
+    },
+    {
+      "id": "f_tests__templates___macro_html",
+      "label": "_macro.html",
+      "kind": "file",
+      "parent": "f_tests__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "_macro.html"
+      }
+    },
+    {
+      "id": "f_tests__templates__context_template_html",
+      "label": "context_template.html",
+      "kind": "file",
+      "parent": "f_tests__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "context_template.html"
+      }
+    },
+    {
+      "id": "f_tests__templates__escaping_template_html",
+      "label": "escaping_template.html",
+      "kind": "file",
+      "parent": "f_tests__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "escaping_template.html"
+      }
+    },
+    {
+      "id": "f_tests__templates__mail_txt",
+      "label": "mail.txt",
+      "kind": "file",
+      "parent": "f_tests__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "mail.txt"
+      }
+    },
+    {
+      "id": "f_tests__templates__nested",
+      "label": "nested",
+      "kind": "dir",
+      "parent": "f_tests__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "nested"
+      }
+    },
+    {
+      "id": "f_tests__templates__nested__nested_txt",
+      "label": "nested.txt",
+      "kind": "file",
+      "parent": "f_tests__templates__nested",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "nested.txt"
+      }
+    },
+    {
+      "id": "f_tests__templates__non_escaping_template_txt",
+      "label": "non_escaping_template.txt",
+      "kind": "file",
+      "parent": "f_tests__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "non_escaping_template.txt"
+      }
+    },
+    {
+      "id": "f_tests__templates__simple_template_html",
+      "label": "simple_template.html",
+      "kind": "file",
+      "parent": "f_tests__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "simple_template.html"
+      }
+    },
+    {
+      "id": "f_tests__templates__template_filter_html",
+      "label": "template_filter.html",
+      "kind": "file",
+      "parent": "f_tests__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "template_filter.html"
+      }
+    },
+    {
+      "id": "f_tests__templates__template_test_html",
+      "label": "template_test.html",
+      "kind": "file",
+      "parent": "f_tests__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "template_test.html"
+      }
+    },
+    {
+      "id": "f_tests__test_appctx_py",
+      "label": "test_appctx.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_appctx.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps",
+      "label": "test_apps",
+      "kind": "dir",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_apps"
+      }
+    },
+    {
+      "id": "f_tests__test_apps___env",
+      "label": ".env",
+      "kind": "file",
+      "parent": "f_tests__test_apps",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": ".env"
+      }
+    },
+    {
+      "id": "f_tests__test_apps___flaskenv",
+      "label": ".flaskenv",
+      "kind": "file",
+      "parent": "f_tests__test_apps",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": ".flaskenv"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp",
+      "label": "blueprintapp",
+      "kind": "dir",
+      "parent": "f_tests__test_apps",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "blueprintapp"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__blueprintapp",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps",
+      "label": "apps",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__blueprintapp",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "apps"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__blueprintapp__apps",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__admin",
+      "label": "admin",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__blueprintapp__apps",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "admin"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__admin____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__blueprintapp__apps__admin",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__admin__static",
+      "label": "static",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__blueprintapp__apps__admin",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "static"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__admin__static__css",
+      "label": "css",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__blueprintapp__apps__admin__static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "css"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__admin__static__css__test_css",
+      "label": "test.css",
+      "kind": "file",
+      "parent": "f_tests__test_apps__blueprintapp__apps__admin__static__css",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test.css"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__admin__static__test_txt",
+      "label": "test.txt",
+      "kind": "file",
+      "parent": "f_tests__test_apps__blueprintapp__apps__admin__static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test.txt"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__admin__templates",
+      "label": "templates",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__blueprintapp__apps__admin",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "templates"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__admin__templates__admin",
+      "label": "admin",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__blueprintapp__apps__admin__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "admin"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__admin__templates__admin__index_html",
+      "label": "index.html",
+      "kind": "file",
+      "parent": "f_tests__test_apps__blueprintapp__apps__admin__templates__admin",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "index.html"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__frontend",
+      "label": "frontend",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__blueprintapp__apps",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "frontend"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__frontend____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__blueprintapp__apps__frontend",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__frontend__templates",
+      "label": "templates",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__blueprintapp__apps__frontend",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "templates"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__frontend__templates__frontend",
+      "label": "frontend",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__blueprintapp__apps__frontend__templates",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "frontend"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__blueprintapp__apps__frontend__templates__frontend__index_html",
+      "label": "index.html",
+      "kind": "file",
+      "parent": "f_tests__test_apps__blueprintapp__apps__frontend__templates__frontend",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "index.html"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp",
+      "label": "cliapp",
+      "kind": "dir",
+      "parent": "f_tests__test_apps",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "cliapp"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__cliapp",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp__app_py",
+      "label": "app.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__cliapp",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "app.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp__factory_py",
+      "label": "factory.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__cliapp",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "factory.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp__importerrorapp_py",
+      "label": "importerrorapp.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__cliapp",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "importerrorapp.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp__inner1",
+      "label": "inner1",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__cliapp",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "inner1"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp__inner1____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__cliapp__inner1",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp__inner1__inner2",
+      "label": "inner2",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__cliapp__inner1",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "inner2"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp__inner1__inner2____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__cliapp__inner1__inner2",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp__inner1__inner2__flask_py",
+      "label": "flask.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__cliapp__inner1__inner2",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "flask.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp__message_txt",
+      "label": "message.txt",
+      "kind": "file",
+      "parent": "f_tests__test_apps__cliapp",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "message.txt"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__cliapp__multiapp_py",
+      "label": "multiapp.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__cliapp",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "multiapp.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__helloworld",
+      "label": "helloworld",
+      "kind": "dir",
+      "parent": "f_tests__test_apps",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "helloworld"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__helloworld__hello_py",
+      "label": "hello.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__helloworld",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "hello.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__helloworld__wsgi_py",
+      "label": "wsgi.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__helloworld",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "wsgi.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__subdomaintestmodule",
+      "label": "subdomaintestmodule",
+      "kind": "dir",
+      "parent": "f_tests__test_apps",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "subdomaintestmodule"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__subdomaintestmodule____init___py",
+      "label": "__init__.py",
+      "kind": "file",
+      "parent": "f_tests__test_apps__subdomaintestmodule",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "__init__.py"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__subdomaintestmodule__static",
+      "label": "static",
+      "kind": "dir",
+      "parent": "f_tests__test_apps__subdomaintestmodule",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "static"
+      }
+    },
+    {
+      "id": "f_tests__test_apps__subdomaintestmodule__static__hello_txt",
+      "label": "hello.txt",
+      "kind": "file",
+      "parent": "f_tests__test_apps__subdomaintestmodule__static",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "hello.txt"
+      }
+    },
+    {
+      "id": "f_tests__test_async_py",
+      "label": "test_async.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_async.py"
+      }
+    },
+    {
+      "id": "f_tests__test_basic_py",
+      "label": "test_basic.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_basic.py"
+      }
+    },
+    {
+      "id": "f_tests__test_blueprints_py",
+      "label": "test_blueprints.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_blueprints.py"
+      }
+    },
+    {
+      "id": "f_tests__test_cli_py",
+      "label": "test_cli.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_cli.py"
+      }
+    },
+    {
+      "id": "f_tests__test_config_py",
+      "label": "test_config.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_config.py"
+      }
+    },
+    {
+      "id": "f_tests__test_converters_py",
+      "label": "test_converters.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_converters.py"
+      }
+    },
+    {
+      "id": "f_tests__test_helpers_py",
+      "label": "test_helpers.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_helpers.py"
+      }
+    },
+    {
+      "id": "f_tests__test_instance_config_py",
+      "label": "test_instance_config.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_instance_config.py"
+      }
+    },
+    {
+      "id": "f_tests__test_json_py",
+      "label": "test_json.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_json.py"
+      }
+    },
+    {
+      "id": "f_tests__test_json_tag_py",
+      "label": "test_json_tag.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_json_tag.py"
+      }
+    },
+    {
+      "id": "f_tests__test_logging_py",
+      "label": "test_logging.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_logging.py"
+      }
+    },
+    {
+      "id": "f_tests__test_regression_py",
+      "label": "test_regression.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_regression.py"
+      }
+    },
+    {
+      "id": "f_tests__test_reqctx_py",
+      "label": "test_reqctx.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_reqctx.py"
+      }
+    },
+    {
+      "id": "f_tests__test_request_py",
+      "label": "test_request.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_request.py"
+      }
+    },
+    {
+      "id": "f_tests__test_session_interface_py",
+      "label": "test_session_interface.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_session_interface.py"
+      }
+    },
+    {
+      "id": "f_tests__test_signals_py",
+      "label": "test_signals.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_signals.py"
+      }
+    },
+    {
+      "id": "f_tests__test_subclassing_py",
+      "label": "test_subclassing.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_subclassing.py"
+      }
+    },
+    {
+      "id": "f_tests__test_templating_py",
+      "label": "test_templating.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_templating.py"
+      }
+    },
+    {
+      "id": "f_tests__test_testing_py",
+      "label": "test_testing.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_testing.py"
+      }
+    },
+    {
+      "id": "f_tests__test_user_error_handler_py",
+      "label": "test_user_error_handler.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_user_error_handler.py"
+      }
+    },
+    {
+      "id": "f_tests__test_views_py",
+      "label": "test_views.py",
+      "kind": "file",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "test_views.py"
+      }
+    },
+    {
+      "id": "f_tests__type_check",
+      "label": "type_check",
+      "kind": "dir",
+      "parent": "f_tests",
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.8,
+            1.0
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "type_check"
+      }
+    },
+    {
+      "id": "f_tests__type_check__typing_app_decorators_py",
+      "label": "typing_app_decorators.py",
+      "kind": "file",
+      "parent": "f_tests__type_check",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "typing_app_decorators.py"
+      }
+    },
+    {
+      "id": "f_tests__type_check__typing_error_handler_py",
+      "label": "typing_error_handler.py",
+      "kind": "file",
+      "parent": "f_tests__type_check",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "typing_error_handler.py"
+      }
+    },
+    {
+      "id": "f_tests__type_check__typing_route_py",
+      "label": "typing_route.py",
+      "kind": "file",
+      "parent": "f_tests__type_check",
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "typing_route.py"
+      }
+    },
+    {
+      "id": "f_uv_lock",
+      "label": "uv.lock",
+      "kind": "file",
+      "parent": "repo",
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.95,
+            0.85
+          ],
+          "width": 1.1,
+          "height": 0.6
+        }
+      },
+      "content_tiers": {
+        "overview": "uv.lock"
+      }
+    }
+  ],
+  "relations": [],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      6.0,
+      3.2
+    ]
+  },
+  "provenance": {
+    "hash": "318f74ff76bff0e3432368216c6ab60465f5c21a2d0fb4abdd3ef814a52fe491",
+    "generated_at": "2026-06-23T14:04:39",
+    "generator": "loupe-ingest/github"
+  }
+}

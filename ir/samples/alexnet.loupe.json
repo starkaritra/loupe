@@ -1,0 +1,21 @@
+{
+  "version": "loupe-ir/v1", "root": "model",
+  "provenance": { "source": "hand-authored", "generated_at": "2026-06-29", "generator": "loupe alexnet" },
+  "lod_policy": { "bands": 3, "distance_thresholds": [8.0, 3.6] },
+  "entities": [
+    { "id": "model", "label": "AlexNet (CNN)", "kind": "model", "parent": null, "lod_band": 0, "placement": { "pos": [0,1.6,2.0] }, "payload": { "type": "text", "data": { "accent": [0.5,0.85,1.0], "width": 2.2, "height": 1.0 } }, "content_tiers": { "overview": "Image classifier: 5 conv + 3 dense", "detail": "ImageNet 224x224 to 1000 classes; ~60M params", "deep": "conv-pool stack builds features; dense layers classify" } },
+    { "id": "in", "label": "Input 224x224x3", "kind": "input", "parent": "model", "lod_band": 1, "placement": { "pos": [0,0,2.4] }, "payload": { "type": "matrix", "data": { "square": true, "accent": [0.6,0.95,0.7], "note": "RGB image" } }, "content_tiers": { "overview": "RGB image, 224x224" } },
+    { "id": "c1", "label": "Conv1 + Pool", "kind": "conv", "parent": "model", "lod_band": 1, "placement": { "pos": [0,0,1.2], "scale": [0.9,0.9,0.9] }, "payload": { "type": "matrix", "data": { "square": true, "accent": [0.5,0.85,1.0], "note": "96@11x11", "eqn": "conv" } }, "content_tiers": { "overview": "96 filters 11x11, stride 4; max-pool" } },
+    { "id": "c2", "label": "Conv2 + Pool", "kind": "conv", "parent": "model", "lod_band": 1, "placement": { "pos": [0,0,0], "scale": [0.85,0.85,0.85] }, "payload": { "type": "matrix", "data": { "square": true, "accent": [0.5,0.85,1.0], "note": "256@5x5", "eqn": "conv" } }, "content_tiers": { "overview": "256 filters 5x5; max-pool; textures" } },
+    { "id": "c3", "label": "Conv3-5", "kind": "conv", "parent": "model", "lod_band": 1, "placement": { "pos": [0,0,-1.2], "scale": [0.8,0.8,0.8] }, "payload": { "type": "matrix", "data": { "square": true, "accent": [0.5,0.85,1.0], "note": "384/384/256", "eqn": "conv" } }, "content_tiers": { "overview": "3 conv 3x3; object parts", "detail": "dive to see kernels + feature maps" } },
+    { "id": "fc6", "label": "FC 4096", "kind": "transform", "parent": "model", "lod_band": 1, "placement": { "pos": [0,0,-2.4], "scale": [0.8,0.8,0.8] }, "payload": { "type": "matrix", "data": { "rows": 9216, "cols": 4096, "accent": [0.5,0.95,0.8], "eqn": "fc" } }, "content_tiers": { "overview": "Flatten then dense 4096; dropout" } },
+    { "id": "fc8", "label": "Classifier", "kind": "output", "parent": "model", "lod_band": 1, "placement": { "pos": [0,0,-3.6] }, "payload": { "type": "matrix", "data": { "rows": 4096, "cols": 1000, "accent": [0.95,0.7,0.4], "eqn": "softmax" } }, "content_tiers": { "overview": "Dense to 1000 classes; softmax" } },
+    { "id": "k0", "label": "convolution", "kind": "head", "parent": "c3", "lod_band": 2, "placement": { "pos": [0,0,0], "scale": [1.0,1.0,1.0] }, "payload": { "type": "conv", "data": { "in": 9, "k": 3, "stride": 1, "pad": 1, "accent": [0.6,0.9,1.0], "eqn": "conv" } }, "content_tiers": { "overview": "3x3 kernel slides over the zero-padded input; each stop = one feature-map cell" } },
+    { "id": "fm", "label": "feature map", "kind": "head", "parent": "c3", "lod_band": 2, "placement": { "pos": [0,0,-0.7], "scale": [0.6,0.6,0.6] }, "payload": { "type": "matrix", "data": { "square": true, "accent": [0.55,0.85,1.0], "note": "activations" } }, "content_tiers": { "overview": "Filter swept over input = feature map" } }
+  ],
+  "relations": [
+    { "from": "in", "to": "c1", "kind": "flow" }, { "from": "c1", "to": "c2", "kind": "flow" }, { "from": "c2", "to": "c3", "kind": "flow" }, { "from": "c3", "to": "fc6", "kind": "flow" }, { "from": "fc6", "to": "fc8", "kind": "flow" }
+  ]
+}
+
+

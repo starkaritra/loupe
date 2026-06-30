@@ -1,0 +1,315 @@
+{
+  "version": "loupe-ir/v1",
+  "root": "model",
+  "entities": [
+    {
+      "id": "model",
+      "label": "LSTM",
+      "kind": "model",
+      "parent": null,
+      "placement": {
+        "pos": [
+          0.0,
+          1.7,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 0,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.45,
+            0.85,
+            1.0
+          ],
+          "width": 2.4,
+          "height": 1.1
+        }
+      },
+      "content_tiers": {
+        "overview": "Recurrent net: reads a sequence step by step",
+        "detail": "hidden + cell state carried across time",
+        "deep": "gates control keep/add/output"
+      }
+    },
+    {
+      "id": "emb",
+      "label": "Embeddings",
+      "kind": "input",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          -3.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 30000,
+          "cols": 256,
+          "accent": [
+            0.5,
+            0.9,
+            0.7
+          ],
+          "eqn": "embed"
+        }
+      },
+      "content_tiers": {
+        "overview": "token to vector"
+      }
+    },
+    {
+      "id": "cell",
+      "label": "LSTM Cell",
+      "kind": "block",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.97,
+          0.97,
+          0.97
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.5,
+            0.9,
+            1.0
+          ],
+          "width": 1.3,
+          "height": 0.85
+        }
+      },
+      "content_tiers": {
+        "overview": "dive: highway + 3 gates"
+      }
+    },
+    {
+      "id": "fgate",
+      "label": "forget",
+      "kind": "head",
+      "parent": "cell",
+      "placement": {
+        "pos": [
+          -2.2,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            1.0,
+            0.6,
+            0.6
+          ],
+          "eqn": "lstm_f"
+        }
+      },
+      "content_tiers": {
+        "overview": "fraction of memory to keep"
+      }
+    },
+    {
+      "id": "igate",
+      "label": "input + candidate",
+      "kind": "head",
+      "parent": "cell",
+      "placement": {
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            1.0,
+            0.7
+          ],
+          "eqn": "lstm_c"
+        }
+      },
+      "content_tiers": {
+        "overview": "what new info to write"
+      }
+    },
+    {
+      "id": "ogate",
+      "label": "output",
+      "kind": "head",
+      "parent": "cell",
+      "placement": {
+        "pos": [
+          2.2,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "lod_band": 2,
+      "payload": {
+        "type": "text",
+        "data": {
+          "accent": [
+            0.6,
+            0.85,
+            1.0
+          ],
+          "eqn": "lstm_o"
+        }
+      },
+      "content_tiers": {
+        "overview": "reveal memory as h(t)"
+      }
+    },
+    {
+      "id": "out",
+      "label": "Output",
+      "kind": "output",
+      "parent": "model",
+      "placement": {
+        "pos": [
+          3.0,
+          0.0,
+          0.0
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.94,
+          0.94,
+          0.94
+        ]
+      },
+      "lod_band": 1,
+      "payload": {
+        "type": "matrix",
+        "data": {
+          "rows": 256,
+          "cols": 30000,
+          "accent": [
+            0.95,
+            0.7,
+            0.4
+          ],
+          "eqn": "softmax"
+        }
+      },
+      "content_tiers": {
+        "overview": "hidden to vocab"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "emb",
+      "to": "cell",
+      "kind": "flow"
+    },
+    {
+      "from": "fgate",
+      "to": "igate",
+      "kind": "flow"
+    },
+    {
+      "from": "igate",
+      "to": "ogate",
+      "kind": "flow"
+    },
+    {
+      "from": "cell",
+      "to": "out",
+      "kind": "flow"
+    }
+  ],
+  "lod_policy": {
+    "bands": 3,
+    "distance_thresholds": [
+      7.0,
+      3.6
+    ]
+  },
+  "provenance": {
+    "source": "modelarch:lstm",
+    "hash": "9e3a0ee56d111a9b970f16686c5ce387f32a87052e8efa1a41fe70799b94837b",
+    "generated_at": "2026-06-29T14:05:36",
+    "generator": "model_architecture adapter"
+  }
+}

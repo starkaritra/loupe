@@ -1,0 +1,21 @@
+{
+  "version": "loupe-ir/v1", "root": "model",
+  "provenance": { "source": "hand-authored", "generated_at": "2026-06-29", "generator": "loupe stable-diffusion" },
+  "lod_policy": { "bands": 3, "distance_thresholds": [8.0, 3.6] },
+  "entities": [
+    { "id": "model", "label": "Stable Diffusion", "kind": "model", "parent": null, "lod_band": 0, "placement": { "pos": [0,1.8,0] }, "payload": { "type": "text", "data": { "accent": [0.5,0.85,1.0], "width": 2.2, "height": 1.0 } }, "content_tiers": { "overview": "Text-to-image: denoise latent noise into a picture", "detail": "CLIP text + U-Net denoiser + VAE decoder", "deep": "iteratively predict and subtract noise in latent space" } },
+    { "id": "prompt", "label": "Prompt", "kind": "input", "parent": "model", "lod_band": 1, "placement": { "pos": [-4.5,0,0] }, "payload": { "type": "text", "data": { "accent": [0.6,0.95,0.7], "width": 1.2, "height": 0.6 } }, "content_tiers": { "overview": "Text prompt" } },
+    { "id": "clip", "label": "CLIP Text Encoder", "kind": "input", "parent": "model", "lod_band": 1, "placement": { "pos": [-2.8,0,0], "scale": [0.85,0.85,0.85] }, "payload": { "type": "matrix", "data": { "rows": 77, "cols": 768, "accent": [0.5,0.9,0.7], "eqn": "clip" } }, "content_tiers": { "overview": "Prompt to conditioning vectors" } },
+    { "id": "unet", "label": "U-Net Denoiser", "kind": "mechanism", "parent": "model", "lod_band": 1, "placement": { "pos": [0,0,0], "scale": [0.9,0.9,0.9] }, "payload": { "type": "text", "data": { "accent": [0.55,0.95,1.0], "width": 1.6, "height": 1.0, "eqn": "unet" } }, "content_tiers": { "overview": "Predicts the noise in the latent, x50 steps", "detail": "down/up blocks + cross-attn to text; dive in" } },
+    { "id": "vae", "label": "VAE Decoder", "kind": "output", "parent": "model", "lod_band": 1, "placement": { "pos": [2.8,0,0], "scale": [0.85,0.85,0.85] }, "payload": { "type": "matrix", "data": { "square": true, "accent": [0.95,0.7,0.4], "note": "latent to image", "eqn": "vae" } }, "content_tiers": { "overview": "Latent to 512x512 RGB image" } },
+    { "id": "down", "label": "down blocks", "kind": "head", "parent": "unet", "lod_band": 2, "placement": { "pos": [-3.0,0,0], "scale": [0.5,0.5,0.5] }, "payload": { "type": "matrix", "data": { "square": true, "glow": 0.5, "accent": [0.6,0.9,1.0], "note": "encode" } }, "content_tiers": { "overview": "Downsample, conv + self-attn" } },
+    { "id": "xattn", "label": "cross-attn", "kind": "head", "parent": "unet", "lod_band": 2, "placement": { "pos": [0,0,0], "scale": [0.55,0.55,0.55] }, "payload": { "type": "attention", "data": { "seq": 8, "d_model": 768, "n_heads": 8, "accent": [0.7,0.95,1.0], "eqn": "diffuse" } }, "content_tiers": { "overview": "Pixels attend to the prompt" } },
+    { "id": "up", "label": "up blocks", "kind": "head", "parent": "unet", "lod_band": 2, "placement": { "pos": [3.0,0,0], "scale": [0.5,0.5,0.5] }, "payload": { "type": "matrix", "data": { "square": true, "glow": 0.5, "accent": [0.6,0.9,1.0], "note": "decode" } }, "content_tiers": { "overview": "Upsample back, skip links" } }
+  ],
+  "relations": [
+    { "from": "prompt", "to": "clip", "kind": "flow" }, { "from": "clip", "to": "unet", "kind": "flow" }, { "from": "unet", "to": "vae", "kind": "flow" },
+    { "from": "down", "to": "xattn", "kind": "flow" }, { "from": "xattn", "to": "up", "kind": "flow" }
+  ]
+}
+
+
